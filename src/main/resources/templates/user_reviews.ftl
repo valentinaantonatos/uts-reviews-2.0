@@ -213,6 +213,7 @@
             </div>
             <div class="modal-body">
                 <form role="form" method="post" id="teacherForm" name="teacherForm">
+                  <!--Select teacher to review-->
                     <div class="form-group">
                         <label for="teacherId">Teacher</label>
                         <select name="teacherId" id="teacherId" class="form-control">
@@ -220,6 +221,14 @@
                         </select>
                     </div>
 
+                    <!-- Attempt for Rating-->
+                    <div class="form-group">
+                        <label for="teacherRatingId">Rating</label>
+                        <select name="teacherRatingId" id="teacherRatingId" class="form-control">
+
+                        </select>
+                    </div>
+                    <!--Add review content-->
                     <div class="form-group">
                         <label for="text">Content</label>
                         <textarea name="text" id="teacherText" rows="10" class="form-control"></textarea>
@@ -246,6 +255,7 @@
             </div>
             <div class="modal-body">
                 <form role="form" method="post" id="subjectForm" name="subjectForm">
+                    <!--Select teacher to review-->
                     <div class="form-group">
                         <label for="subjectId">Subject</label>
                         <select name="subjectId" id="subjectId" class="form-control">
@@ -253,6 +263,15 @@
                         </select>
                     </div>
 
+                    <!-- Attempt for Rating-->
+                    <div class="form-group">
+                        <label for="subjectRatingId">Rating</label>
+                        <select name="subjectRatingId" id="subjectRatingId" class="form-control">
+
+                        </select>
+                    </div>
+
+                    <!--Add review content-->
                     <div class="form-group">
                         <label for="text">Content</label>
                         <textarea name="text" id="subjectText" rows="10" class="form-control"></textarea>
