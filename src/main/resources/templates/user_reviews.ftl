@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="../resources/static/images/eggplant.png"/>
-    <title>Users Reviews</title>
+    <title>Users Reviews - UTSReviews</title>
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
@@ -125,7 +125,7 @@
 <nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="/index">UTS</a>
+            <a class="navbar-brand" href="/index">Home</a>
         </div>
         <div>
             <ul class="nav navbar-nav">
