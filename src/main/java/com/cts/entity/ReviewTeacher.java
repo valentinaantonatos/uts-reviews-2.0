@@ -24,6 +24,10 @@ public class ReviewTeacher {
     @Column(name = "date")
     private Date date;
 
+    //New:
+    @Column(name = "rating")
+    private Double rating;
+
     public Date getDate() {
         return date;
     }
@@ -63,4 +67,14 @@ public class ReviewTeacher {
     public void setText(String text) {
         this.text = text;
     }
+
+    // New stuff:
+    public double getRating() {
+        return rating;
+    }
+
+    public void setRating(double rating) {
+        this.rating = rating;
+    }
+
 }
