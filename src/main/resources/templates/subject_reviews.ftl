@@ -28,9 +28,9 @@
 
 <div class="text-center">
     <#if subjectReviews?? && (subjectReviews?size > 0) >
-        <h2>Reviews Of Subject ${subjectReviews[0].subject.title}</h2>
+        <h2>Reviews for ${subjectReviews[0].subject.title}</h2>
     <#else >
-        <h2>There has no reviews</h2>
+        <h2>There are no reviews for ${subjectReviews[0].subject.title}</h2>
     </#if>
 </div>
 
