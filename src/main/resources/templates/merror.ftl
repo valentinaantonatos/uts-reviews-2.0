@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="../resources/static/images/eggplant.png"/>
     <title>Error</title>
 </head>
 <body>
