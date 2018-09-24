@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Reviews of Subject</title>
+    <title>${subjectReviews[0].subject.title} Reviews - UTSReviews</title>
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
