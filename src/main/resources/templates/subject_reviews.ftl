@@ -40,6 +40,7 @@
         <th>Review</th>
         <th>Date Time</th>
         <th>Rating</th>
+        <th>Difficulty Rating</th>
     </tr>
 <#list subjectReviews as subjectReview>
     <tr>
@@ -47,6 +48,7 @@
         <td>${subjectReview.text}</td>
         <td>${subjectReview.date}</td>
         <td>${subjectReview.rating}</td>
+        <td>${subjectReview.difficultyRating}</td>
     </tr>
 </#list>
 </table>

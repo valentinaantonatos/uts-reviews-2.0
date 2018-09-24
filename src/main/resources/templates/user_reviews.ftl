@@ -228,6 +228,7 @@
 
                         </select>
                     </div>
+
                     <!--Add review content-->
                     <div class="form-group">
                         <label for="text">Content</label>
@@ -255,7 +256,7 @@
             </div>
             <div class="modal-body">
                 <form role="form" method="post" id="subjectForm" name="subjectForm">
-                    <!--Select teacher to review-->
+                    <!--Select subject to review-->
                     <div class="form-group">
                         <label for="subjectId">Subject</label>
                         <select name="subjectId" id="subjectId" class="form-control">
@@ -267,6 +268,14 @@
                     <div class="form-group">
                         <label for="subjectRatingId">Rating</label>
                         <select name="subjectRatingId" id="subjectRatingId" class="form-control">
+
+                        </select>
+                    </div>
+
+                    <!-- Attempt for subject DifficultyRating-->
+                    <div class="form-group">
+                        <label for="difficultyRatingId">Difficulty Rating</label>
+                        <select name="difficultyRatingId" id="difficultyRatingId" class="form-control">
 
                         </select>
                     </div>
