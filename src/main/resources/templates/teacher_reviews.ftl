@@ -28,9 +28,9 @@
 
 <div class="text-center">
     <#if teacherReviews?? && (teacherReviews?size > 0) >
-        <h2>Reviews Of Teacher ${teacherReviews[0].teacher.name}</h2>
+        <h2>Reviews for ${teacherReviews[0].teacher.name}</h2>
     <#else >
-        <h2>There has no reviews</h2>
+        <h2>There are no reviews for ${teacherReviews[0].teacher.name}</h2>
     </#if>
 </div>
 
