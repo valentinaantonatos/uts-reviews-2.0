@@ -27,6 +27,12 @@
     </div>
 </nav>
 
+<div>
+  <button class="btn btn-success" onclick="addSubjectReview()">
+      Create Subject Review
+  </button>
+</div>
+
 <table class="table table-bordered">
     <tr>
         <th>Title</th>

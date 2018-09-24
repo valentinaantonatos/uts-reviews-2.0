@@ -27,6 +27,12 @@
     </div>
 </nav>
 
+<div>
+  <button class="btn btn-primary" onclick="addTeacherReview()">
+    Create Teacher Review
+  </button>
+</div>
+
 <table class="table table-bordered">
     <tr>
         <th>Name</th>

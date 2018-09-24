@@ -140,11 +140,11 @@
 
 <div>
     <button class="btn btn-primary" onclick="addTeacherReview()">
-        Review for Teacher
+        Create Teacher Review
     </button>
 
     <button class="btn btn-success" onclick="addSubjectReview()">
-        Review for Subject
+        Create Subject Review
     </button>
 </div>
 
