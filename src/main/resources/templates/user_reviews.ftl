@@ -149,14 +149,14 @@
 </div>
 
 <div class="text-center">
-    <h2>Reviews Of Teachers</h2>
+    <h2>Teacher Reviews</h2>
 </div>
 
 <table class="table table-bordered">
     <tr>
-        <th>Name Of Teacher</th>
+        <th>Name</th>
         <th>Review</th>
-        <th>Date Time</th>
+        <th>Date/Time</th>
         <th>Operations</th>
     </tr>
     <#list teacherReviews as teacherReview>
@@ -177,14 +177,14 @@
 </table>
 
 <div class="text-center">
-    <h2>Reviews Of Subjects</h2>
+    <h2>Subject Reviews</h2>
 </div>
 
 <table class="table table-bordered">
     <tr>
         <th>Subject Title</th>
         <th>Review</th>
-        <th>Date Time</th>
+        <th>Date/Time</th>
         <th>Operations</th>
     </tr>
 <#list subjectReviews as subjectReview>
