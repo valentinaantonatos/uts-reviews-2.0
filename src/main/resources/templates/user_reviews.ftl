@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="../resources/static/images/eggplant.png"/>
     <title>Users Reviews</title>
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -11,7 +12,7 @@
     <script type="text/javascript">
 
         function confirmDelete(url){
-            if(confirm("Are you sure to Delete?")){
+            if(confirm("Are you sure you want to delete?")){
                 window.location.href = url;
             }
         }
