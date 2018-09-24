@@ -40,12 +40,14 @@
         <th>User Name</th>
         <th>Review</th>
         <th>Date Time</th>
+        <th>Rating</th>
     </tr>
 <#list subjectReviews as subjectReview>
     <tr>
         <td>${subjectReview.user.name}</td>
         <td>${subjectReview.text}</td>
         <td>${subjectReview.date}</td>
+        <td>${subjectReview.Rating}</td>
     </tr>
 </#list>
 </table>
