@@ -39,12 +39,18 @@
     <tr>
         <th>User Name</th>
         <th>Review</th>
-        <th>Date Time</th>
+        <th>Subject Mark</th>
+        <th>Subject Difficulty</th>
+        <th>Subject Rating</th>
+        <th>Date/Time</th>
     </tr>
 <#list subjectReviews as subjectReview>
     <tr>
         <td>${subjectReview.user.name}</td>
         <td>${subjectReview.text}</td>
+        <td>${subjectReview.mark}</td>
+        <td>${subjectReview.difficulty}</td>
+        <td>${subjectReview.rating}</td>
         <td>${subjectReview.date}</td>
     </tr>
 </#list>

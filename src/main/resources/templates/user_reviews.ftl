@@ -184,6 +184,9 @@
     <tr>
         <th>Subject Title</th>
         <th>Review</th>
+        <th>Subject Mark</th>
+        <th>Subject Difficult</th>
+        <th>Subject Rating</th>
         <th>Date/Time</th>
         <th>Operations</th>
     </tr>
@@ -191,6 +194,9 @@
     <tr>
         <td>${subjectReview.subject.title}</td>
         <td>${subjectReview.text}</td>
+        <td>${subjectReview.mark}</td>
+        <td>${subjectReview.difficulty}</td>
+        <td>${subjectReview.rating}</td>
         <td>${subjectReview.date}</td>
         <td>
             <a type="button" class="btn btn-sm" onclick="updateSubject('${subjectReview.id}')">
