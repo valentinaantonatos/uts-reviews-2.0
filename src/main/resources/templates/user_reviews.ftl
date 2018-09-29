@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="../resources/static/images/eggplant.png"/>
-    <title>Users Reviews</title>
+    <title>Users Reviews - UTSReviews</title>
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
@@ -125,7 +125,7 @@
 <nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="/index">UTS</a>
+            <a class="navbar-brand" href="/index">Home</a>
         </div>
         <div>
             <ul class="nav navbar-nav">
@@ -140,23 +140,23 @@
 
 <div>
     <button class="btn btn-primary" onclick="addTeacherReview()">
-        Review for Teacher
+        Create Teacher Review
     </button>
 
     <button class="btn btn-success" onclick="addSubjectReview()">
-        Review for Subject
+        Create Subject Review
     </button>
 </div>
 
 <div class="text-center">
-    <h2>Reviews Of Teachers</h2>
+    <h2>Teacher Reviews</h2>
 </div>
 
 <table class="table table-bordered">
     <tr>
-        <th>Name Of Teacher</th>
+        <th>Name</th>
         <th>Review</th>
-        <th>Date Time</th>
+        <th>Date/Time</th>
         <th>Operations</th>
     </tr>
     <#list teacherReviews as teacherReview>
@@ -177,14 +177,14 @@
 </table>
 
 <div class="text-center">
-    <h2>Reviews Of Subjects</h2>
+    <h2>Subject Reviews</h2>
 </div>
 
 <table class="table table-bordered">
     <tr>
         <th>Subject Title</th>
         <th>Review</th>
-        <th>Date Time</th>
+        <th>Date/Time</th>
         <th>Operations</th>
     </tr>
 <#list subjectReviews as subjectReview>

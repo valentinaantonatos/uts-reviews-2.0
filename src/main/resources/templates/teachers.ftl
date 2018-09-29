@@ -14,7 +14,7 @@
 <nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="/index">UTS</a>
+            <a class="navbar-brand" href="/index">Home</a>
         </div>
         <div>
             <ul class="nav navbar-nav">
@@ -26,6 +26,12 @@
         </div>
     </div>
 </nav>
+
+<div>
+  <button class="btn btn-primary" onclick="addTeacherReview()">
+    Create Teacher Review
+  </button>
+</div>
 
 <table class="table table-bordered">
     <tr>
