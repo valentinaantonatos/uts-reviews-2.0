@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="../resources/static/images/eggplant.png"/>
-    <title>You done messed up</title>
+    <title>Error - UTSReviews</title>
 </head>
 <body>
     <h2>${message}</h2>
