@@ -216,7 +216,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="teacherModalLabel">Review for Teacher</h4>
+                <h4 class="modal-title" id="teacherModalLabel">Teacher Review</h4>
             </div>
             <div class="modal-body">
                 <form role="form" method="post" id="teacherForm" name="teacherForm">
@@ -249,7 +249,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="subjectModalLabel">Review for Subject</h4>
+                <h4 class="modal-title" id="subjectModalLabel">Subject Review</h4>
             </div>
             <div class="modal-body">
                 <form role="form" method="post" id="subjectForm" name="subjectForm">
@@ -258,6 +258,13 @@
                         <select name="subjectId" id="subjectId" class="form-control">
 
                         </select>
+                    </div>
+
+                    <!-- Subject Mark Attempt -->
+                    <div class = "form-group">
+                      <label for = "mark">Subject Mark</label>
+                      <select name = "mark" id = "mark" class = "form-control">
+                      </select>
                     </div>
 
                     <div class="form-group">

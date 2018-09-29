@@ -64,4 +64,16 @@ public class ReviewSubject {
         this.text = text;
     }
 
+    //New - Subject Mark
+    public void setMark(Integer mark) {
+        this.mark = mark;
+    }
+
+    public Integer getMark() {
+        return mark;
+    }
+
+    @Column(name = "mark")
+    private Integer mark;
+
 }
