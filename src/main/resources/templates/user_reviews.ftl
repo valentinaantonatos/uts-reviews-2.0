@@ -263,7 +263,7 @@
                     <!-- Subject Mark Attempt -->
                     <div class = "form-group">
                       <label for = "mark">Subject Mark</label>
-                      <select name = "mark" id = "mark" class = "form-control">
+                      <textarea name = "mark" id = "mark" rows = "1" class = "form-control"></textarea>
                       </select>
                     </div>
 
