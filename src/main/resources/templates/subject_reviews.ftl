@@ -39,7 +39,8 @@
     <tr>
         <th>User Name</th>
         <th>Review</th>
-        <th>Date Time</th>
+        <th>Subject Mark</th>
+        <th>Date/Time</th>
         <th>Rating</th>
         <th>Difficulty Rating</th>
     </tr>
@@ -47,6 +48,9 @@
     <tr>
         <td>${subjectReview.user.name}</td>
         <td>${subjectReview.text}</td>
+        <td>${subjectReview.mark}</td>
+        <td>${subjectReview.difficulty}</td>
+        <td>${subjectReview.rating}</td>
         <td>${subjectReview.date}</td>
         <td>${subjectReview.rating}</td>
         <td>${subjectReview.difficultyRating}</td>

@@ -184,6 +184,9 @@
     <tr>
         <th>Subject Title</th>
         <th>Review</th>
+        <th>Subject Mark</th>
+        <th>Subject Difficult</th>
+        <th>Subject Rating</th>
         <th>Date/Time</th>
         <th>Operations</th>
     </tr>
@@ -191,6 +194,9 @@
     <tr>
         <td>${subjectReview.subject.title}</td>
         <td>${subjectReview.text}</td>
+        <td>${subjectReview.mark}</td>
+        <td>${subjectReview.difficulty}</td>
+        <td>${subjectReview.rating}</td>
         <td>${subjectReview.date}</td>
         <td>
             <a type="button" class="btn btn-sm" onclick="updateSubject('${subjectReview.id}')">
@@ -210,7 +216,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="teacherModalLabel">Review for Teacher</h4>
+                <h4 class="modal-title" id="teacherModalLabel">Teacher Review</h4>
             </div>
             <div class="modal-body">
                 <form role="form" method="post" id="teacherForm" name="teacherForm">
@@ -253,7 +259,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="subjectModalLabel">Review for Subject</h4>
+                <h4 class="modal-title" id="subjectModalLabel">Subject Review</h4>
             </div>
             <div class="modal-body">
                 <form role="form" method="post" id="subjectForm" name="subjectForm">
@@ -264,6 +270,14 @@
 
                         </select>
                     </div>
+
+                    <!-- Subject Mark Attempt -->
+                    <div class = "form-group">
+                      <label for = "mark">Subject Mark</label>
+                      <textarea name = "mark" id = "mark" rows = "1" class = "form-control"></textarea>
+                      </select>
+                    </div>
+
 
                     <!-- Attempt for Rating-->
                     <div class="form-group">
