@@ -18,6 +18,15 @@ public class ReviewSubject {
     @ManyToOne
     private Subject subject;
 
+    @Column(name = "text",length = 500)
+    private String text;
+
+    @Column(name = "date")
+    private Date date;
+
+    @Column(name="difficulty_rating")
+    private Integer difficulty_rating;
+
     public Date getDate() {
         return date;
     }
@@ -25,12 +34,6 @@ public class ReviewSubject {
     public void setDate(Date date) {
         this.date = date;
     }
-
-    @Column(name = "text",length = 500)
-    private String text;
-
-    @Column(name = "date")
-    private Date date;
 
     public Integer getId() {
         return id;
@@ -62,6 +65,14 @@ public class ReviewSubject {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    public int getDifficultyRating() {
+        return difficulty_rating;
+    }
+
+    public void setDifficultyRating(int rating) {
+        difficulty_rating = rating;
     }
 
 }

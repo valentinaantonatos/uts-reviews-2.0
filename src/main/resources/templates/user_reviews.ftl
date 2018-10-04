@@ -256,22 +256,22 @@
             </div>
 
             <div class="slidecontainer">
-              <label for="difficulyRating">Difficulty</label>
+              <label for="difficultyRating">Difficulty</label>
               <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-              <p>Value: <span id="demo"></span></p>
+              <p> Value: <span name="difficulty_rating" id="difficulty_rating" ></span></p>
             </div>
 
             <script>
             var slider = document.getElementById("myRange");
-            var output = document.getElementById("demo");
+            var output = document.getElementById("difficulty_rating");
             output.innerHTML = slider.value;
 
             slider.oninput = function() {
               output.innerHTML = this.value;
             }
-            </script>
+          </script>
 
-            <label>Rating</label>
+            <!--<label>Rating</label>
             <div id="divRating" class="rating">
               <span id="spanRatingExcellent" title="Excellent">☆</span>
               <span id="spanRatingGood" title="Good">☆</span>
@@ -292,7 +292,7 @@
                 event.target.classList.add('rated');
               }
             });
-            </script>
+          </script>-->
 
 
             <div class="form-group">
