@@ -40,9 +40,9 @@
         <th>User Name</th>
         <th>Review</th>
         <th>Subject Mark</th>
-        <th>Subject Difficulty</th>
-        <th>Subject Rating</th>
         <th>Date/Time</th>
+        <th>Rating</th>
+        <th>Difficulty Rating</th>
     </tr>
 <#list subjectReviews as subjectReview>
     <tr>
@@ -52,6 +52,8 @@
         <td>${subjectReview.difficulty}</td>
         <td>${subjectReview.rating}</td>
         <td>${subjectReview.date}</td>
+        <td>${subjectReview.rating}</td>
+        <td>${subjectReview.difficultyRating}</td>
     </tr>
 </#list>
 </table>

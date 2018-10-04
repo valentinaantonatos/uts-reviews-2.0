@@ -32,6 +32,14 @@ public class ReviewSubject {
     @Column(name = "date")
     private Date date;
 
+    //New:
+    @Column(name = "rating")
+    private Double rating;
+
+    //New:
+    @Column(name = "difficultyRating")
+    private int difficultyRating;
+
     public Integer getId() {
         return id;
     }
@@ -75,5 +83,23 @@ public class ReviewSubject {
 
     @Column(name = "mark")
     private Integer mark;
+    
+    // New stuff:
+    public double getRating() {
+        return rating;
+    }
+
+    public void setRating(double rating) {
+        this.rating = rating;
+    }
+
+    // New stuff:
+    public double getDifficultyRating() {
+        return difficultyRating;
+    }
+
+    public void setDifficultyRating(double difficultyRating) {
+        this.difficultyRating = difficultyRating;
+    }
 
 }
