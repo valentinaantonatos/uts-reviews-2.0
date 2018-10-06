@@ -40,6 +40,9 @@ public class ReviewSubject {
     @Column(name = "difficultyRating")
     private int difficultyRating;
 
+    @Column(name = "mark", length = 3)
+    private Integer mark;
+
     public Integer getId() {
         return id;
     }
@@ -81,9 +84,6 @@ public class ReviewSubject {
         return mark;
     }
 
-    @Column(name = "mark")
-    private Integer mark;
-    
     // New stuff:
     public double getRating() {
         return rating;

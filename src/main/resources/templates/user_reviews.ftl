@@ -275,7 +275,6 @@
                     <div class = "form-group">
                       <label for = "mark">Subject Mark</label>
                       <textarea name = "mark" id = "mark" rows = "1" class = "form-control"></textarea>
-                      </select>
                     </div>
 
 
