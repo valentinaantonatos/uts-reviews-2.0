@@ -10,12 +10,14 @@
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
 
     <script type = "text/javascript">
-        //Flag review code here
-        //Needs to change the TINYINT value from 0 to 1
-        function flagReview() {
-          ${subjectReviews[0]}.setFlagged(1);
-        }
+        //Add comment to a review
+        //Use a form
+       function addComment() {
+
+       }
+       
     </script>
+
 </head>
 <body>
 
@@ -36,47 +38,32 @@
 </nav>
 
 <div class="text-center">
+  <!-- Need a list of comments, then change these parameters to subjectComments -->
     <#if subjectReviews?? && (subjectReviews?size > 0) >
-        <h2>Reviews for ${subjectReviews[0].subject.title}</h2>
+        <h2>Comments for ${subjectReviews[0].subject.title}</h2>
     <#else >
-        <h2>There are no reviews for ${subjectReviews[0].subject.title}</h2>
+        <h2>There are no comments for ${subjectReviews[0].subject.title}</h2>
     </#if>
+</div>
+
+<div>
+  <p> ${subjectReview.text} </p>
+  <button class = "btn btn-primary" onClick = "addComment()">
+    Add Comment
+  </button>
 </div>
 
 <table class="table table-bordered">
     <tr>
         <th>User Name</th>
-        <th>Review</th>
-        <th>Subject Mark</th>
-        <th>Date/Time</th>
-        <th>Rating</th>
-        <th>Difficulty Rating</th>
         <th>Comment</th>
-        <th>Flag Review</th>
+        <th>Date/Time</th>
     </tr>
-<#list subjectReviews as subjectReview>
+<#list subjectComments as subjectComments>
     <tr>
-        <td>${subjectReview.user.name}</td>
-        <td>${subjectReview.text}</td>
-        <td>${subjectReview.mark}</td>
-        <td>${subjectReview.date}</td>
-        <td>${subjectReview.rating}</td>
-        <td>${subjectReview.difficultyRating}</td>
-        <td>
-          <!-- Comment on Reviews -->
-          <a type = "button" class = "button" href = "/subject_comments">
-            Comment
-         </a>
-       </td>
-
-        <!-- Flag Reviews -->
-        <td>
-          <input type = "checkbox" name = "flagged" value = "flagReview"><br>
-          <!--<input type = "submit" value = "Submit"><br> -->
-          <button class = "btn btn-primary" onClick = "flagReview()">
-            Flag
-          </button>
-        </td>
+        <td>${subjectComments.user.name}</td>
+        <td>${subjectComments.text}</td>
+        <td>${subjectComments.date}</td>
     </tr>
 </#list>
 </table>

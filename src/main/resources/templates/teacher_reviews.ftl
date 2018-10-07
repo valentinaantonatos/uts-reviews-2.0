@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+    <script type = "text/javascript">
+        //Flag review code here
+        //Needs to change the TINYINT value from 0 to 1
+        function flagReview() {
+          ${teacherReviews[0]}.setFlagged(1);
+        }
+
+    </script>
 </head>
 <body>
 
@@ -41,6 +50,8 @@
         <th>Review</th>
         <th>Date Time</th>
         <th>Rating</th>
+        <th>Comment</th>
+        <th>Flag Reviews</th>
     </tr>
     <#list teacherReviews as teacherReview>
         <tr>
@@ -48,6 +59,22 @@
             <td>${teacherReview.text}</td>
             <td>${teacherReview.date}</td>
             <td>${teacherReview.rating}</td>
+
+            <!-- Comment on Reviews -->
+            <td>
+              <a type = "button" class = "button" href = "/teacher_comments">
+                Comment
+              </a>
+            </td>
+
+            <!-- Flag Reviews -->
+            <td>
+              <input type = "checkbox" name = "flagged" value = "flagReview"><br>
+              <!--<input type = "submit" value = "Submit"><br>-->
+              <button class = "btn btn-primary" onClick = "flagReview()">
+                Flag
+              </button>
+            </td>
         </tr>
     </#list>
 </table>
