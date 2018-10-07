@@ -41,6 +41,7 @@
         <th>Review</th>
         <th>Date Time</th>
         <th>Rating</th>
+        <th>Flag Reviews</th>
     </tr>
     <#list teacherReviews as teacherReview>
         <tr>
@@ -48,6 +49,10 @@
             <td>${teacherReview.text}</td>
             <td>${teacherReview.date}</td>
             <td>${teacherReview.rating}</td>
+            <td>
+              <input type = "checkbox" name = "flagged" value = "flagReview"><br>
+              <input type = "submit" value = "Submit"><br>
+            </td>
         </tr>
     </#list>
 </table>

@@ -156,6 +156,7 @@
     <tr>
         <th>Name</th>
         <th>Review</th>
+        <th>Teacher Rating</th>
         <th>Date/Time</th>
         <th>Operations</th>
     </tr>
@@ -163,6 +164,7 @@
         <tr>
             <td>${teacherReview.teacher.name}</td>
             <td>${teacherReview.text}</td>
+            <td>${teacherReview.rating}</td>
             <td>${teacherReview.date}</td>
             <td>
                 <a type="button" class="btn btn-sm" onclick="updateTeacher('${teacherReview.id}')">

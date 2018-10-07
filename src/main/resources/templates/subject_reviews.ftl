@@ -43,17 +43,21 @@
         <th>Date/Time</th>
         <th>Rating</th>
         <th>Difficulty Rating</th>
+        <th>Flag Review</th>
     </tr>
 <#list subjectReviews as subjectReview>
     <tr>
         <td>${subjectReview.user.name}</td>
         <td>${subjectReview.text}</td>
         <td>${subjectReview.mark}</td>
-        <td>${subjectReview.difficulty}</td>
-        <td>${subjectReview.rating}</td>
         <td>${subjectReview.date}</td>
         <td>${subjectReview.rating}</td>
         <td>${subjectReview.difficultyRating}</td>
+        <!-- Flag Reviews -->
+        <td>
+          <input type = "checkbox" name = "flagged" value = "flagReview"><br>
+          <input type = "submit" value = "Submit"><br>
+        </td>
     </tr>
 </#list>
 </table>
