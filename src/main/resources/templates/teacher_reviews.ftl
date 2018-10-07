@@ -50,6 +50,7 @@
         <th>Review</th>
         <th>Date Time</th>
         <th>Rating</th>
+        <th>Comment</th>
         <th>Flag Reviews</th>
     </tr>
     <#list teacherReviews as teacherReview>
@@ -58,12 +59,21 @@
             <td>${teacherReview.text}</td>
             <td>${teacherReview.date}</td>
             <td>${teacherReview.rating}</td>
+
+            <!-- Comment on Reviews -->
+            <td>
+              <a type = "button" class = "button" href = "/teacher_comments">
+                Comment
+              </a>
+            </td>
+
+            <!-- Flag Reviews -->
             <td>
               <input type = "checkbox" name = "flagged" value = "flagReview"><br>
               <!--<input type = "submit" value = "Submit"><br>-->
-              <a type = "button" class = "btn btn-primary" onClick = "flagReview()">
+              <button class = "btn btn-primary" onClick = "flagReview()">
                 Flag
-              </a>
+              </button>
             </td>
         </tr>
     </#list>
