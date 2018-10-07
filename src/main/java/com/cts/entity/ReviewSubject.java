@@ -44,7 +44,7 @@ public class ReviewSubject {
     private Integer mark;
 
     @Column(name = "flagged")
-    private TINYINT flagged;
+    private boolean flagged;
 
     public Integer getId() {
         return id;
@@ -97,19 +97,19 @@ public class ReviewSubject {
     }
 
     // New stuff:
-    public double getDifficultyRating() {
+    public int getDifficultyRating() {
         return difficultyRating;
     }
 
-    public void setDifficultyRating(double difficultyRating) {
+    public void setDifficultyRating(int difficultyRating) {
         this.difficultyRating = difficultyRating;
     }
 
-    public TINYINT getFlagged() {
+    public boolean getFlagged() {
       return flagged;
     }
 
-    public void setFlagged(TINYINT flagged) {
+    public void setFlagged(boolean flagged) {
       this.flagged = flagged;
     }
 
