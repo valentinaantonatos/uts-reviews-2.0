@@ -51,7 +51,10 @@
             <td>${teacherReview.rating}</td>
             <td>
               <input type = "checkbox" name = "flagged" value = "flagReview"><br>
-              <input type = "submit" value = "Submit"><br>
+              <!--<input type = "submit" value = "Submit"><br>-->
+              <a type = "button" class = "btn btn-primary" onClick = "flagReview('${teacherReviews[0]}')">
+                Flag
+              </a>
             </td>
         </tr>
     </#list>
