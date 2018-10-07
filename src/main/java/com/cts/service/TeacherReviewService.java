@@ -38,6 +38,7 @@ public class TeacherReviewService {
         ReviewTeacher reviewTeacher = reviewTeacherRepository.findOne(id);
         reviewTeacher.setText(text);
         reviewTeacher.setDate(new Date());
+        reviewTeacher.setFlagged(false);
         reviewTeacherRepository.save(reviewTeacher);
     }
 

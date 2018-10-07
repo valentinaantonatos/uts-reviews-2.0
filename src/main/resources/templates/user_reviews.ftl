@@ -199,6 +199,10 @@
             <a type="button" class="btn btn-sm" onclick="confirmDelete('/usr/review/subject/delete/${subjectReview.id}')" >
                 Delete
             </a>
+            <!-- Comment Test-->
+            <a type="button" class="btn btn-sm" onclick="reviewComments('/usr/review/subject/comments/${teacherReview.id}')" >
+                Comments
+            </a>
         </td>
     </tr>
 </#list>

@@ -37,6 +37,7 @@ public class SubjectReviewService {
         ReviewSubject reviewSubject = reviewSubjectRepository.findOne(id);
         reviewSubject.setText(text);
         reviewSubject.setDate(new Date());
+        reviewSubject.setFlagged(false);
         reviewSubjectRepository.save(reviewSubject);
     }
 

@@ -40,12 +40,14 @@
         <th>User Name</th>
         <th>Review</th>
         <th>Date Time</th>
+        <th>Flag Review</th>
     </tr>
     <#list teacherReviews as teacherReview>
         <tr>
             <td>${teacherReview.user.name}</td>
             <td>${teacherReview.text}</td>
             <td>${teacherReview.date}</td>
+            <td>${teacherReview.flagged}</td>
         </tr>
     </#list>
 </table>

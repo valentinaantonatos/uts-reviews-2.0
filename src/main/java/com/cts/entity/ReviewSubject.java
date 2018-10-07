@@ -18,19 +18,14 @@ public class ReviewSubject {
     @ManyToOne
     private Subject subject;
 
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
     @Column(name = "text",length = 500)
     private String text;
 
     @Column(name = "date")
     private Date date;
+    
+    @Column(name = "flagged")
+    private Boolean flagged;
 
     public Integer getId() {
         return id;
@@ -63,5 +58,22 @@ public class ReviewSubject {
     public void setText(String text) {
         this.text = text;
     }
+    
+     public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+    
+     public Boolean getFlagged() {
+        return flagged;
+    }
+
+    public void setFlagged(Boolean flagged) {
+        this.flagged = flagged;
+    }
+
 
 }

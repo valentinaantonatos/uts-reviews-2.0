@@ -23,6 +23,9 @@ public class ReviewTeacher {
 
     @Column(name = "date")
     private Date date;
+    
+    @Column(name = "flagged")
+    private Boolean flagged;
 
     public Date getDate() {
         return date;
@@ -62,5 +65,13 @@ public class ReviewTeacher {
 
     public void setText(String text) {
         this.text = text;
+    }
+    
+    public Boolean getFlagged() {
+        return flagged;
+    }
+
+    public void setFlagged(Boolean flagged) {
+        this.flagged = flagged;
     }
 }
