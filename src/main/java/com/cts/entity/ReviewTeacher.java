@@ -29,7 +29,7 @@ public class ReviewTeacher {
     private Double rating;
 
     @Column(name = "flagged")
-    private TINYINT flagged;
+    private boolean flagged;
 
     public Date getDate() {
         return date;
@@ -80,11 +80,11 @@ public class ReviewTeacher {
         this.rating = rating;
     }
 
-    public TINYINT getFlagged() {
+    public boolean getFlagged() {
       return flagged;
     }
 
-    public void setFlagged(TINYINT flagged) {
+    public void setFlagged(boolean flagged) {
       this.flagged = flagged;
     }
 
