@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+    <script type = "text/javascript">
+        //Flag review code here
+        function flagReview() {
+          ${teacherReviews[0]}.setFlagged(1);
+        }
+
+    </script>
 </head>
 <body>
 
@@ -52,7 +60,7 @@
             <td>
               <input type = "checkbox" name = "flagged" value = "flagReview"><br>
               <!--<input type = "submit" value = "Submit"><br>-->
-              <a type = "button" class = "btn btn-primary" onClick = "flagReview('${teacherReviews[0]}')">
+              <a type = "button" class = "btn btn-primary" onClick = "flagReview()">
                 Flag
               </a>
             </td>

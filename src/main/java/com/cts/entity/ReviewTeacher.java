@@ -28,6 +28,9 @@ public class ReviewTeacher {
     @Column(name = "rating")
     private Double rating;
 
+    @Column(name = "flagged")
+    private TINYINT flagged;
+
     public Date getDate() {
         return date;
     }
@@ -75,6 +78,14 @@ public class ReviewTeacher {
 
     public void setRating(double rating) {
         this.rating = rating;
+    }
+
+    public TINYINT getFlagged() {
+      return flagged;
+    }
+
+    public void setFlagged(TINYINT flagged) {
+      this.flagged = flagged;
     }
 
 }

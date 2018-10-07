@@ -43,6 +43,9 @@ public class ReviewSubject {
     @Column(name = "mark", length = 3)
     private Integer mark;
 
+    @Column(name = "flagged")
+    private TINYINT flagged;
+
     public Integer getId() {
         return id;
     }
@@ -100,6 +103,14 @@ public class ReviewSubject {
 
     public void setDifficultyRating(double difficultyRating) {
         this.difficultyRating = difficultyRating;
+    }
+
+    public TINYINT getFlagged() {
+      return flagged;
+    }
+
+    public void setFlagged(TINYINT flagged) {
+      this.flagged = flagged;
     }
 
 }
