@@ -11,6 +11,7 @@
 
     <script type = "text/javascript">
         //Flag review code here
+        //Needs to change the TINYINT value from 0 to 1
         function flagReview() {
           ${subjectReviews[0]}.setFlagged(1);
         }
