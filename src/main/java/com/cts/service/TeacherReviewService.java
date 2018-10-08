@@ -34,10 +34,11 @@ public class TeacherReviewService {
     }
 
     @Transactional
-    public void updateReview(Integer id,String text){
+    public void updateReview(Integer id,String text, Integer overallRating){
         ReviewTeacher reviewTeacher = reviewTeacherRepository.findOne(id);
         reviewTeacher.setText(text);
         reviewTeacher.setDate(new Date());
+        reviewTeacher.setOverallRating(overallRating);
         reviewTeacherRepository.save(reviewTeacher);
     }
 

@@ -127,7 +127,7 @@ public class UserController {
 
     @RequestMapping("/usr/review/teacher/add")
     public String addTeacherReviews(HttpSession httpSession, @RequestParam("teacherId") Integer teacherId
-                ,@RequestParam("text")String text){
+                ,@RequestParam("text")String text, @RequestParam("teacherRating")Integer overallRating){
         User user  = (User) httpSession.getAttribute("user");
         Integer id = user==null?1:user.getId();
         ReviewTeacher reviewTeacher = new ReviewTeacher();
@@ -135,6 +135,7 @@ public class UserController {
         reviewTeacher.setUser(userService.findById(id));
         reviewTeacher.setTeacher(teacherRepository.findOne(teacherId));
         reviewTeacher.setText(text);
+        reviewTeacher.setOverallRating(overallRating);
         teacherReviewService.addReview(reviewTeacher);
         return "redirect:/usr/views";
     }
@@ -158,10 +159,10 @@ public class UserController {
 
     @RequestMapping("/usr/review/teacher/update")
     public String updateTeacherReviews(HttpSession httpSession, @RequestParam("id")Integer recordId
-            ,@RequestParam("text")String text){
+            ,@RequestParam("text")String text ,@RequestParam("teacherRating")Integer overallRating){
         User user  = (User) httpSession.getAttribute("user");
         Integer id = user==null?1:user.getId();
-        teacherReviewService.updateReview(recordId,text);
+        teacherReviewService.updateReview(recordId,text,overallRating);
         return "redirect:/usr/views";
     }
 

@@ -82,8 +82,8 @@ public class ReviewTeacher {
     return overallRating;
   }
 
-  public void setOverallRating(String overallRating) {
-    this.overallRating.equals(overallRating);
+  public void setOverallRating(Integer overallRating) {
+    this.overallRating = overallRating;
   }
 
   public Boolean getFlagged() {
