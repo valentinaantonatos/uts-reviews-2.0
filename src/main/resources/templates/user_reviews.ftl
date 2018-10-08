@@ -234,8 +234,12 @@
             <!-- Attempt for Rating-->
             <div class="form-group">
               <label for="teacherRatingId">Rating</label>
-              <select name="teacherRatingId" id="teacherRatingId" class="form-control">
-
+              <select name="teacherRating" id="teacherRating" class="form-control">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
               </select>
             </div>
 
