@@ -5,6 +5,14 @@ import java.util.Date;
 
 @Entity(name = "vote_subject")
 public class ReviewSubject {
+    
+    public ReviewSubject(){
+        text = "Default";
+        overallRating = 0.0;
+        difficulty = 0;
+        mark = 0;
+        flagged = false;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -40,7 +48,7 @@ public class ReviewSubject {
     @Column(name = "difficulty", nullable = true)
     private Integer difficulty;
 
-    @Column(name = "mark", length = 3)
+    @Column(name = "mark", nullable=false)
     private Integer mark;
 
     @Column(name = "flagged")
@@ -84,7 +92,8 @@ public class ReviewSubject {
     }
 
     public Integer getMark() {
-        return mark;
+        //return mark;
+        return mark == null ? 0 : mark;
     }
 
     // New stuff:

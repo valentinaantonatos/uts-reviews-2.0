@@ -62,7 +62,7 @@
         <td>${subjectReview.mark}</td>
         <td>${subjectReview.date}</td>
         <td>${subjectReview.rating}</td>
-        <td>${subjectReview.difficultyRating}</td>
+        <td>${subjectReview.difficulty}</td>
         <td>
           <!-- Comment on Reviews -->
           <a type = "button" class = "button" href = "/subject_comments">
