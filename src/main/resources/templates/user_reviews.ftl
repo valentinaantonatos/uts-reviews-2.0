@@ -197,9 +197,9 @@
     <tr>
         <td>${subjectReview.subject.title}</td>
         <td>${subjectReview.text}</td>
-        <td>${subjectReview.mark}</td>
-        <td>${subjectReview.difficulty}</td>
-        <td>${subjectReview.rating}</td>
+        <td>${subjectReview.mark}</td> 
+        <td>${subjectReview.difficulty}</td> 
+        <td>${subjectReview.overallRating}</td> 
         <td>${subjectReview.date}</td>
         <td>
             <a type="button" class="btn btn-sm" onclick="updateSubject('${subjectReview.id}')">
@@ -266,6 +266,7 @@
             </div>
             <div class="modal-body">
                 <form role="form" method="post" id="subjectForm" name="subjectForm">
+                    
                     <!--Select subject to review-->
                     <div class="form-group">
                         <label for="subjectId">Subject</label>
@@ -276,8 +277,9 @@
 
                     <!-- Subject Mark Attempt -->
                     <div class = "form-group">
-                      <label for = "mark">Subject Mark</label>
-                      <textarea name = "mark" id = "mark" rows = "1" class = "form-control"></textarea>
+                      <label for = "mark">Mark</label>
+                      <input type = "number" id = "mark"  class = "form-control">
+                      
                     </div>
 
 
@@ -291,10 +293,26 @@
 
                     <!-- Attempt for subject DifficultyRating-->
                     <div class="form-group">
-                        <label for="difficultyRatingId">Difficulty Rating</label>
-                        <select name="difficultyRatingId" id="difficultyRatingId" class="form-control">
+                        <!--<label for="difficultyRatingId">Difficulty Rating</label>-->
+                        <!--<select name="difficultyRatingId" id="difficultyRatingId" class="form-control">-->
+                            
+                     <div class="slidecontainer">
+                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                        <p> Value: <span name="difficulty_rating" id="difficulty_rating" ></span></p>
+                    </div>
+                    
+                            <script>
+            var slider = document.getElementById("myRange");
+            var output = document.getElementById("difficulty_rating");
+            output.innerHTML = slider.value;
+            slider.oninput = function() {
+              output.innerHTML = this.value;
+            }
+          </script>
 
                         </select>
+                       
+                        
                     </div>
 
                     <!--Add review content-->

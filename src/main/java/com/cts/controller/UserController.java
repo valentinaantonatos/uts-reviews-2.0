@@ -164,10 +164,10 @@ public class UserController {
 
     @RequestMapping("/usr/review/subject/update")
     public String updateSubjectReviews(HttpSession httpSession,@RequestParam("id")Integer recordId
-            ,@RequestParam("text")String text){
+            ,@RequestParam("text")String text, @RequestParam("mark")Integer mark){
         User user  = (User) httpSession.getAttribute("user");
         Integer id = user==null?1:user.getId();
-        subjectReviewService.updateReview(recordId,text);
+        subjectReviewService.updateReview(recordId,text,mark);
         return "redirect:/usr/views";
     }
 

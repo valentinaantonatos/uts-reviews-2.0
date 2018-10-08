@@ -29,6 +29,25 @@
                     }
             );
         }
+
+    <!-- Test: -->
+        function showSubjectReview() {
+            $('#subjectForm').prop('action','/usr/review/subject');
+
+            $.ajax(
+                    {
+                        type:'get',
+                        dataType: 'json',
+                        url: '/usr/review/subject/list',
+                        success: function (result) {
+                            for(var i=0;i<result.length;i++){
+                                $('#subjectId').append('<option value="'+result[i].id+'">'+result[i].title+'</option>');
+                            }
+                            $('#subjectModal').modal();
+                        }
+                    }
+            );
+        }
         
     </script>
 </head>
