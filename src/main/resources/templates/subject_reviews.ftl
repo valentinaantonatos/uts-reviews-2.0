@@ -61,7 +61,7 @@
         <td>${subjectReview.text}</td>
         <td>${subjectReview.mark}</td>
         <td>${subjectReview.date}</td>
-        <td>${subjectReview.rating}</td>
+        <td>${subjectReview.overallRating}</td>
         <td>${subjectReview.difficulty}</td>
         <td>
           <!-- Comment on Reviews -->
