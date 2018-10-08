@@ -33,11 +33,13 @@ public class SubjectReviewService {
     }
 
     @Transactional
-    public void updateReview(Integer id, String text, Integer mark){
+    public void updateReview(Integer id, String text, String mark, Integer difficulty, Integer overallRating){
         ReviewSubject reviewSubject = reviewSubjectRepository.findOne(id);
         reviewSubject.setText(text);
         reviewSubject.setDate(new Date());
         reviewSubject.setMark(mark);
+        reviewSubject.setDifficulty(difficulty);
+        reviewSubject.setOverallRating(overallRating);
         reviewSubjectRepository.save(reviewSubject);
     }
 

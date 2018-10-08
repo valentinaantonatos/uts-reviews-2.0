@@ -6,86 +6,92 @@ import java.util.Date;
 @Entity(name = "vote_teacher")
 public class ReviewTeacher {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+  public ReviewTeacher(){
+    text = "Default";
+    overallRating = 0;
+    flagged = false;
+  }
 
-    @JoinColumn(name = "user_id")
-    @ManyToOne
-    private User user;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Integer id;
 
-    @JoinColumn(name = "teacher_id")
-    @ManyToOne
-    private Teacher teacher;
+  @JoinColumn(name = "user_id")
+  @ManyToOne
+  private User user;
 
-    @Column(name = "text",length = 500)
-    private String text;
+  @JoinColumn(name = "teacher_id")
+  @ManyToOne
+  private Teacher teacher;
 
-    @Column(name = "date")
-    private Date date;
+  @Column(name = "text",length = 500)
+  private String text;
 
-    //New:
-    @Column(name = "overall_rating")
-    private Double overallRating;
+  @Column(name = "date")
+  private Date date;
 
-    @Column(name = "flagged")
-    private Boolean flagged;
+  //New:
+  @Column(name = "overall_rating")
+  private Integer overallRating;
 
-    public Date getDate() {
-        return date;
-    }
+  @Column(name = "flagged")
+  private Boolean flagged;
 
-    public void setDate(Date date) {
-        this.date = date;
-    }
+  public Date getDate() {
+    return date;
+  }
 
-    public Integer getId() {
-        return id;
-    }
+  public void setDate(Date date) {
+    this.date = date;
+  }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+  public Integer getId() {
+    return id;
+  }
 
-    public User getUser() {
-        return user;
-    }
+  public void setId(Integer id) {
+    this.id = id;
+  }
 
-    public void setUser(User user) {
-        this.user = user;
-    }
+  public User getUser() {
+    return user;
+  }
 
-    public Teacher getTeacher() {
-        return teacher;
-    }
+  public void setUser(User user) {
+    this.user = user;
+  }
 
-    public void setTeacher(Teacher teacher) {
-        this.teacher = teacher;
-    }
+  public Teacher getTeacher() {
+    return teacher;
+  }
 
-    public String getText() {
-        return text;
-    }
+  public void setTeacher(Teacher teacher) {
+    this.teacher = teacher;
+  }
 
-    public void setText(String text) {
-        this.text = text;
-    }
+  public String getText() {
+    return text;
+  }
 
-    // New stuff:
-    public double getOverallRating() {
-        return overallRating;
-    }
+  public void setText(String text) {
+    this.text = text;
+  }
 
-    public void setOverallRating(double overallRating) {
-        this.overallRating = overallRating;
-    }
+  // New stuff:
+  public Integer getOverallRating() {
+    return overallRating;
+  }
 
-    public Boolean getFlagged() {
-      return flagged;
-    }
+  public void setOverallRating(String overallRating) {
+    this.overallRating.equals(overallRating);
+  }
 
-    public void setFlagged(Boolean flagged) {
-      this.flagged = flagged;
-    }
+  public Boolean getFlagged() {
+    return flagged;
+  }
+
+  public void setFlagged(Boolean flagged) {
+    this.flagged = flagged;
+  }
 
 }

@@ -48,7 +48,7 @@ public class UserController {
     public String registerPage(){
         return "register";
     }
-    
+
     //New Stuff
     @RequestMapping(value = "/user_profile")
     public String profilePage() {
@@ -141,7 +141,7 @@ public class UserController {
 
     @RequestMapping("/usr/review/subject/add")
     public String addSubjectReviews(HttpSession httpSession, @RequestParam("subjectId") Integer subjectId
-            ,@RequestParam("text")String text){
+            ,@RequestParam("text")String text, @RequestParam("difficulty")Integer difficulty, @RequestParam("mark")String mark, @RequestParam("subjectRatingId")Integer overallRating){
         User user  = (User) httpSession.getAttribute("user");
         Integer id = user==null?1:user.getId();
         ReviewSubject reviewSubject = new ReviewSubject();
@@ -149,6 +149,9 @@ public class UserController {
         reviewSubject.setUser(userService.findById(id));
         reviewSubject.setSubject(subjectRepository.findOne(subjectId));
         reviewSubject.setText(text);
+        reviewSubject.setMark(mark);
+        reviewSubject.setDifficulty(difficulty);
+        reviewSubject.setOverallRating(overallRating);
         subjectReviewService.addReview(reviewSubject);
         return "redirect:/usr/views";
     }
@@ -164,10 +167,10 @@ public class UserController {
 
     @RequestMapping("/usr/review/subject/update")
     public String updateSubjectReviews(HttpSession httpSession,@RequestParam("id")Integer recordId
-            ,@RequestParam("text")String text, @RequestParam("mark")Integer mark){
+            ,@RequestParam("text")String text, @RequestParam("mark")String mark, @RequestParam("difficulty")Integer difficulty, @RequestParam("subjectRatingId")Integer overallRating){
         User user  = (User) httpSession.getAttribute("user");
         Integer id = user==null?1:user.getId();
-        subjectReviewService.updateReview(recordId,text,mark);
+        subjectReviewService.updateReview(recordId,text,mark,difficulty,overallRating);
         return "redirect:/usr/views";
     }
 
