@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="../resources/static/images/eggplant.png"/>
-    <title>Users Reviews - UTSReviews</title>
+    <title>My Profile - UTSReviews</title>
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
