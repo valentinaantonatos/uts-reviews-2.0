@@ -48,6 +48,12 @@ public class UserController {
     public String registerPage(){
         return "register";
     }
+    
+    //New Stuff
+    @RequestMapping(value = "/user_profile")
+    public String profilePage() {
+        return "user_profile";
+    }
 
     @RequestMapping(value = "/usr/login",method = RequestMethod.POST)
     public ModelAndView login(String username, String password, HttpSession httpSession, ModelAndView modelAndView){

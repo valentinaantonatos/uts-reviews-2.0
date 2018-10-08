@@ -30,6 +30,7 @@
                 <li class="active"><a href="/teacher/list">Teachers</a></li>
                 <li><a href="/subject/list">Subjects</a></li>
                 <li><a href="/usr/views">My Reviews</a></li>
+                <li><a href = "/user_profile">My Profile</a></li>
                 <li class="pull-right"><a href="/usr/logout">Logout</a></li>
             </ul>
         </div>
