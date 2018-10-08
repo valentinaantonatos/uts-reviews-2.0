@@ -25,11 +25,11 @@ public class ReviewTeacher {
     private Date date;
 
     //New:
-    @Column(name = "rating")
-    private Double rating;
+    @Column(name = "overall_rating")
+    private Double overallRating;
 
     @Column(name = "flagged")
-    private TINYINT flagged;
+    private Boolean flagged;
 
     public Date getDate() {
         return date;
@@ -72,19 +72,19 @@ public class ReviewTeacher {
     }
 
     // New stuff:
-    public double getRating() {
-        return rating;
+    public double getOverallRating() {
+        return overallRating;
     }
 
-    public void setRating(double rating) {
-        this.rating = rating;
+    public void setOverallRating(double overallRating) {
+        this.overallRating = overallRating;
     }
 
-    public TINYINT getFlagged() {
+    public Boolean getFlagged() {
       return flagged;
     }
 
-    public void setFlagged(TINYINT flagged) {
+    public void setFlagged(Boolean flagged) {
       this.flagged = flagged;
     }
 

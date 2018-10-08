@@ -33,18 +33,18 @@ public class ReviewSubject {
     private Date date;
 
     //New:
-    @Column(name = "rating")
-    private Double rating;
+    @Column(name = "overall_rating")
+    private Double overallRating;
 
     //New:
-    @Column(name = "difficultyRating")
-    private int difficultyRating;
+    @Column(name = "difficulty", nullable = true)
+    private Integer difficulty;
 
     @Column(name = "mark", length = 3)
     private Integer mark;
 
     @Column(name = "flagged")
-    private TINYINT flagged;
+    private Boolean flagged;
 
     public Integer getId() {
         return id;
@@ -88,28 +88,28 @@ public class ReviewSubject {
     }
 
     // New stuff:
-    public double getRating() {
-        return rating;
+    public double getOverallRating() {
+        return overallRating;
     }
 
-    public void setRating(double rating) {
-        this.rating = rating;
+    public void setOverallRating(double overallRating) {
+        this.overallRating = overallRating;
     }
 
     // New stuff:
-    public double getDifficultyRating() {
-        return difficultyRating;
+    public int getDifficulty() {
+        return difficulty;
     }
 
-    public void setDifficultyRating(double difficultyRating) {
-        this.difficultyRating = difficultyRating;
+    public void setDifficulty(int difficulty) {
+        this.difficulty = difficulty;
     }
 
-    public TINYINT getFlagged() {
+    public Boolean getFlagged() {
       return flagged;
     }
 
-    public void setFlagged(TINYINT flagged) {
+    public void setFlagged(Boolean flagged) {
       this.flagged = flagged;
     }
 
