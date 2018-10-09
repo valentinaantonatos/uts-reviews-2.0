@@ -11,7 +11,7 @@
 </head>
 <body>
 <header class="page-header text-center">
-    <h1>User Register</h1>
+    <h1>Register an Account</h1>
 </header>
 <div class="container">
     <form class="form-horizontal" method="post" action="/usr/register">

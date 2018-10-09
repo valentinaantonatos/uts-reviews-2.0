@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
   <link rel="icon" href="../resources/static/images/eggplant.png"/>
-  <title>Users Reviews - UTSReviews</title>
+  <title>My Reviews - UTSReviews</title>
 
   <link rel="stylesheet" href="/css/bootstrap.min.css">
   <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
@@ -185,13 +186,14 @@
 
   <table class="table table-bordered">
     <tr>
-      <th>Subject Title</th>
-      <th>Review</th>
-      <th>Subject Mark</th>
-      <th>Subject Difficult</th>
-      <th>Subject Rating</th>
-      <th>Date/Time</th>
-      <th>Operations</th>
+        <th>Subject Title</th>
+        <th>Review</th>
+        <th>Subject Mark</th>
+        <th>Subject Difficulty</th>
+        <th>Subject Rating</th>
+        <th>Date/Time</th>
+        <th>Operations</th>
+
     </tr>
     <#list subjectReviews as subjectReview>
     <tr>

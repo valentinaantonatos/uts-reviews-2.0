@@ -26,8 +26,8 @@
         </div>
         <div>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/teacher/list">Teachers</a></li>
-                <li><a href="/subject/list">Subjects</a></li>
+                <li><a href="/teacher/list">Teachers</a></li>
+                <li class="active"><a href="/subject/list">Subjects</a></li>
                 <li><a href="/usr/views">My Reviews</a></li>
                 <li><a href = "/user_profile">My Profile</a></li>
                 <li class="pull-right"><a href="/usr/logout">Logout</a></li>
@@ -52,7 +52,6 @@
         <th>Date/Time</th>
         <th>Rating</th>
         <th>Difficulty Rating</th>
-        <th>Comment</th>
         <th>Flag Review</th>
     </tr>
 <#list subjectReviews as subjectReview>
@@ -63,12 +62,6 @@
         <td>${subjectReview.date}</td>
         <td>${subjectReview.overallRating}</td>
         <td>${subjectReview.difficulty}</td>
-        <td>
-          <!-- Comment on Reviews -->
-          <a type = "button" class = "button" href = "/subject_comments">
-            Comment
-         </a>
-       </td>
 
         <!-- Flag Reviews -->
         <td>
