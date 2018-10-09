@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
-    
+
     <script type = "text/javascript">
-    
+
     function addSubjectReview() {
             $('#subjectForm').prop('action','/usr/review/subject/add');
 
@@ -29,7 +29,26 @@
                     }
             );
         }
-        
+
+    <!-- Test: -->
+        function showSubjectReview() {
+            $('#subjectForm').prop('action','/usr/review/subject');
+
+            $.ajax(
+                    {
+                        type:'get',
+                        dataType: 'json',
+                        url: '/usr/review/subject/list',
+                        success: function (result) {
+                            for(var i=0;i<result.length;i++){
+                                $('#subjectId').append('<option value="'+result[i].id+'">'+result[i].title+'</option>');
+                            }
+                            $('#subjectModal').modal();
+                        }
+                    }
+            );
+        }
+
     </script>
 </head>
 <body>
@@ -80,7 +99,7 @@
 
 
 <!-- Test Code below -->
-                    
+
 <!-- 模态框（Modal） -->
 <div class="modal fade" id="subjectModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -101,26 +120,50 @@
 
                     <!-- Subject Mark Attempt -->
                     <div class = "form-group">
-                      <label for = "mark">Subject Mark</label>
-                      <textarea name = "mark" id = "mark" rows = "1" class = "form-control"></textarea>
+                      <label for = "mark">Mark</label>
+                      <select name="mark" id="mark" class="form-control">
+                        <option value="High Distinction">High Distinction</option>
+                        <option value="Distinction">Distinction</option>
+                        <option value="Credit">Credit</option>
+                        <option value="Pass">Pass</option>
+                        <option value="Fail">Fail</option>
+                      </select>
                     </div>
 
 
                     <!-- Attempt for Rating-->
                     <div class="form-group">
-                        <label for="subjectRatingId">Rating</label>
-                        <select name="subjectRatingId" id="subjectRatingId" class="form-control">
-
-                        </select>
+                      <label for="subjectRatingId">Rating</label>
+                      <select name="subjectRatingId" id="subjectRatingId" class="form-control">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                      </select>
                     </div>
 
                     <!-- Attempt for subject DifficultyRating-->
                     <div class="form-group">
-                        <label for="difficultyRatingId">Difficulty Rating</label>
-                        <select name="difficultyRatingId" id="difficultyRatingId" class="form-control">
+                      <label for="difficultyRatingId">Difficulty Rating</label>
+                      <!--<select name="difficultyRatingId" id="difficultyRatingId" class="form-control">-->
+                      <!--<input name="difficulty" type = "text" id = "difficulty"  class = "form-control">-->
 
-                        </select>
-                    </div>
+                      <div class="slidecontainer">
+                        <input name="difficulty" type="range" min="1" max="5" value="50" class="slider" id="myRange">
+                        <p> Value: <span name="difficultyValue" id="difficultyValue" ></span></p>
+                      </div>
+
+                      <script>
+                      var slider = document.getElementById("myRange");
+                      var output = document.getElementById("difficultyValue");
+                      output.innerHTML = slider.value;
+                      slider.oninput = function() {
+                        output.innerHTML = this.value;
+                      }
+                      </script>
+
+                    </select>
 
                     <!--Add review content-->
                     <div class="form-group">
@@ -138,7 +181,7 @@
         </div><!-- /.modal-content -->
     </div><!-- /.modal -->
 </div>
-         
+
 
 </body>
 </html>

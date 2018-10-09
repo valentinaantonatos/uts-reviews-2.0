@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
-    
+
     <script type = "text/javascript">
             function addTeacherReview() {
             $('#teacherForm').prop('action','/usr/review/teacher/add');
@@ -29,7 +29,7 @@
             );
         }
     </script>
-    
+
 </head>
 <body>
 
@@ -42,7 +42,7 @@
             <ul class="nav navbar-nav">
                 <li class="active"><a href="/teacher/list">Teachers</a></li>
                 <li><a href="/subject/list">Subjects</a></li>
-                <li><a href="/usr/views">My Reviews</a></li>                
+                <li><a href="/usr/views">My Reviews</a></li>
                 <li><a href = "/user_profile">My Profile</a></li>
                 <li class="pull-right"><a href="/usr/logout">Logout</a></li>
             </ul>
@@ -94,13 +94,17 @@
                         </select>
                     </div>
 
-                    <!-- Attempt for Rating-->
-                    <div class="form-group">
+                     <!-- Attempt for Rating-->
+                      <div class="form-group">
                         <label for="teacherRatingId">Rating</label>
-                        <select name="teacherRatingId" id="teacherRatingId" class="form-control">
-
+                        <select name="teacherRating" id="teacherRating" class="form-control">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
                         </select>
-                    </div>
+                      </div>
 
                     <!--Add review content-->
                     <div class="form-group">

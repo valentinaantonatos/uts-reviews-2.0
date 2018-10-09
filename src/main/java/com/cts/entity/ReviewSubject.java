@@ -6,6 +6,12 @@ import java.util.Date;
 @Entity(name = "vote_subject")
 public class ReviewSubject {
 
+    public ReviewSubject(){
+        text = "Default";
+        overallRating = 0;
+        flagged = false;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -33,15 +39,15 @@ public class ReviewSubject {
     private Date date;
 
     //New:
-    @Column(name = "overall_rating")
-    private Double overallRating;
+    @Column(name = "overall_rating", nullable=false)
+    private Integer overallRating;
 
     //New:
-    @Column(name = "difficulty", nullable = true)
+    @Column(name = "difficulty", nullable = false)
     private Integer difficulty;
 
-    @Column(name = "mark", length = 3)
-    private Integer mark;
+    @Column(name = "mark", nullable = false)
+    private String mark;
 
     @Column(name = "flagged")
     private Boolean flagged;
@@ -79,20 +85,21 @@ public class ReviewSubject {
     }
 
     //New - Subject Mark
-    public void setMark(Integer mark) {
+    public void setMark(String mark) {
         this.mark = mark;
     }
 
-    public Integer getMark() {
+    public String getMark() {
         return mark;
+        //return mark == null ? 0 : mark;
     }
 
     // New stuff:
-    public double getOverallRating() {
+    public Integer getOverallRating() {
         return overallRating;
     }
 
-    public void setOverallRating(double overallRating) {
+    public void setOverallRating(Integer overallRating) {
         this.overallRating = overallRating;
     }
 

@@ -62,6 +62,7 @@
         <td>${subjectReview.date}</td>
         <td>${subjectReview.overallRating}</td>
         <td>${subjectReview.difficulty}</td>
+
         <!-- Flag Reviews -->
         <td>
           <input type = "checkbox" name = "flagged" value = "flagReview"><br>

@@ -48,7 +48,7 @@ public class UserController {
     public String registerPage(){
         return "register";
     }
-    
+
     //New Stuff
     @RequestMapping(value = "/user_profile")
     public String profilePage() {
@@ -127,7 +127,7 @@ public class UserController {
 
     @RequestMapping("/usr/review/teacher/add")
     public String addTeacherReviews(HttpSession httpSession, @RequestParam("teacherId") Integer teacherId
-                ,@RequestParam("text")String text){
+                ,@RequestParam("text")String text, @RequestParam("teacherRating")Integer overallRating){
         User user  = (User) httpSession.getAttribute("user");
         Integer id = user==null?1:user.getId();
         ReviewTeacher reviewTeacher = new ReviewTeacher();
@@ -135,13 +135,14 @@ public class UserController {
         reviewTeacher.setUser(userService.findById(id));
         reviewTeacher.setTeacher(teacherRepository.findOne(teacherId));
         reviewTeacher.setText(text);
+        reviewTeacher.setOverallRating(overallRating);
         teacherReviewService.addReview(reviewTeacher);
         return "redirect:/usr/views";
     }
 
     @RequestMapping("/usr/review/subject/add")
     public String addSubjectReviews(HttpSession httpSession, @RequestParam("subjectId") Integer subjectId
-            ,@RequestParam("text")String text){
+            ,@RequestParam("text")String text, @RequestParam("difficulty")Integer difficulty, @RequestParam("mark")String mark, @RequestParam("subjectRatingId")Integer overallRating){
         User user  = (User) httpSession.getAttribute("user");
         Integer id = user==null?1:user.getId();
         ReviewSubject reviewSubject = new ReviewSubject();
@@ -149,25 +150,28 @@ public class UserController {
         reviewSubject.setUser(userService.findById(id));
         reviewSubject.setSubject(subjectRepository.findOne(subjectId));
         reviewSubject.setText(text);
+        reviewSubject.setMark(mark);
+        reviewSubject.setDifficulty(difficulty);
+        reviewSubject.setOverallRating(overallRating);
         subjectReviewService.addReview(reviewSubject);
         return "redirect:/usr/views";
     }
 
     @RequestMapping("/usr/review/teacher/update")
     public String updateTeacherReviews(HttpSession httpSession, @RequestParam("id")Integer recordId
-            ,@RequestParam("text")String text){
+            ,@RequestParam("text")String text ,@RequestParam("teacherRating")Integer overallRating){
         User user  = (User) httpSession.getAttribute("user");
         Integer id = user==null?1:user.getId();
-        teacherReviewService.updateReview(recordId,text);
+        teacherReviewService.updateReview(recordId,text,overallRating);
         return "redirect:/usr/views";
     }
 
     @RequestMapping("/usr/review/subject/update")
     public String updateSubjectReviews(HttpSession httpSession,@RequestParam("id")Integer recordId
-            ,@RequestParam("text")String text){
+            ,@RequestParam("text")String text, @RequestParam("mark")String mark, @RequestParam("difficulty")Integer difficulty, @RequestParam("subjectRatingId")Integer overallRating){
         User user  = (User) httpSession.getAttribute("user");
         Integer id = user==null?1:user.getId();
-        subjectReviewService.updateReview(recordId,text);
+        subjectReviewService.updateReview(recordId,text,mark,difficulty,overallRating);
         return "redirect:/usr/views";
     }
 

@@ -58,7 +58,7 @@
             <td>${teacherReview.user.name}</td>
             <td>${teacherReview.text}</td>
             <td>${teacherReview.date}</td>
-            <td>${teacherReview.rating}</td>
+            <td>${teacherReview.overallRating}</td>
 
             <!-- Flag Reviews -->
             <td>
