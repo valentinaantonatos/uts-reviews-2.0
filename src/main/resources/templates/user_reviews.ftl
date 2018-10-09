@@ -188,7 +188,7 @@
         <th>Subject Title</th>
         <th>Review</th>
         <th>Subject Mark</th>
-        <th>Subject Difficult</th>
+        <th>Subject Difficulty</th>
         <th>Subject Rating</th>
         <th>Date/Time</th>
         <th>Operations</th>
