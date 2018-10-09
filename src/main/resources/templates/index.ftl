@@ -28,7 +28,7 @@
     </nav>
 
     <div class="text-center">
-        <h1 class="text-danger">Welcome to the UTS</h1>
+        <h1 class="text-danger">Welcome to UTSReviews</h1>
     </div>
 </body>
 </html>
