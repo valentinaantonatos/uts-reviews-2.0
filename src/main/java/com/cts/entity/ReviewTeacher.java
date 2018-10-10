@@ -9,7 +9,7 @@ public class ReviewTeacher {
   public ReviewTeacher(){
     text = "Default";
     overallRating = 0;
-    flagged = false;
+    flagged = "Unflagged";
   }
 
   @Id
@@ -24,7 +24,7 @@ public class ReviewTeacher {
   @ManyToOne
   private Teacher teacher;
 
-  @Column(name = "text",length = 500)
+  @Column(name = "text",length = 1000)
   private String text;
 
   @Column(name = "date")
@@ -35,7 +35,7 @@ public class ReviewTeacher {
   private Integer overallRating;
 
   @Column(name = "flagged")
-  private Boolean flagged;
+  private String flagged;
 
   public Date getDate() {
     return date;
@@ -86,11 +86,11 @@ public class ReviewTeacher {
     this.overallRating = overallRating;
   }
 
-  public Boolean getFlagged() {
+  public String getFlagged() {
     return flagged;
   }
 
-  public void setFlagged(Boolean flagged) {
+  public void setFlagged(String flagged) {
     this.flagged = flagged;
   }
 

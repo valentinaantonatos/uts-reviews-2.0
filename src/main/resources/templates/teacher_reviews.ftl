@@ -150,11 +150,11 @@
                       <div class="form-group">
                         <label for="teacherRatingId">Rating</label>
                         <select name="teacherRating" id="teacherRating" class="form-control">
-                          <option value="1">1</option>
+                          <option value="1" selected="selected">1 Worst</option>
                           <option value="2">2</option>
                           <option value="3">3</option>
                           <option value="4">4</option>
-                          <option value="5">5</option>
+                          <option value="5">5 Best</option>
                         </select>
                       </div>
 

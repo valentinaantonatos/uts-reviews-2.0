@@ -125,7 +125,7 @@
                         <option value="High Distinction">High Distinction</option>
                         <option value="Distinction">Distinction</option>
                         <option value="Credit">Credit</option>
-                        <option value="Pass">Pass</option>
+                        <option value="Pass" selected="selected">Pass</option>
                         <option value="Fail">Fail</option>
                       </select>
                     </div>
@@ -135,11 +135,11 @@
                     <div class="form-group">
                       <label for="subjectRatingId">Rating</label>
                       <select name="subjectRatingId" id="subjectRatingId" class="form-control">
-                        <option value="1">1</option>
+                        <option value="1" selected="selected">1 Worst</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
-                        <option value="5">5</option>
+                        <option value="5">5 Best</option>
                       </select>
                     </div>
 

@@ -237,18 +237,18 @@
             <div class="form-group">
               <label for="teacherRatingId">Rating</label>
               <select name="teacherRating" id="teacherRating" class="form-control">
-                <option value="1">1</option>
+                <option value="1" selected="selected">1 Worst</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
-                <option value="5">5</option>
+                <option value="5">5 Best</option>
               </select>
             </div>
 
             <!--Add review content-->
             <div class="form-group">
               <label for="text">Content</label>
-              <textarea name="text" id="teacherText" rows="10" class="form-control"></textarea>
+              <textarea name="text" id="teacherText" rows="10" class="form-control" required></textarea>
             </div>
 
             <input type="hidden" name="id" id="teacherReviewId">
@@ -298,11 +298,11 @@
             <div class="form-group">
               <label for="subjectRatingId">Rating</label>
               <select name="subjectRatingId" id="subjectRatingId" class="form-control">
-                <option value="1">1</option>
+                <option value="1" selected="selected">1 Worst</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
-                <option value="5">5</option>
+                <option value="5">5 Best</option>
               </select>
             </div>
 
@@ -334,7 +334,7 @@
           <!--Add review content-->
           <div class="form-group">
             <label for="text">Content</label>
-            <textarea name="text" id="subjectText" rows="10" class="form-control"></textarea>
+            <textarea name="text" id="subjectText" rows="10" class="form-control" required></textarea>
           </div>
 
           <input type="hidden" name="id" id="subjectReviewId">

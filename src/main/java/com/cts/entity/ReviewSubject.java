@@ -32,7 +32,7 @@ public class ReviewSubject {
         this.date = date;
     }
 
-    @Column(name = "text",length = 500)
+    @Column(name = "text",length = 1000)
     private String text;
 
     @Column(name = "date")

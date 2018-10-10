@@ -24,14 +24,14 @@
         <div class="form-group">
             <label class="col-sm-2 control-label">Username</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="username" placeholder="Username">
+                <input type="text" class="form-control" name="username" placeholder="Username" required>
             </div>
         </div>
 
         <div class="form-group">
             <label class="col-sm-2 control-label">Password</label>
             <div class="col-sm-10">
-                <input type="password" class="form-control" name="password" placeholder="Password">
+                <input type="password" class="form-control" name="password" placeholder="Password" required>
             </div>
         </div>
 
@@ -40,8 +40,8 @@
 
             </div>
             <div class="col-sm-10">
-                <button class="btn btn-success" onclick="register()" type="button">Register</button>
                 <button class="btn btn-primary" type="submit">Login</button>
+                <button class="btn btn-success" onclick="register()" type="button">Register</button>
             </div>
         </div>
     </form>
