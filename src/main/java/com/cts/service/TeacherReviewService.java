@@ -41,6 +41,14 @@ public class TeacherReviewService {
         reviewTeacher.setOverallRating(overallRating);
         reviewTeacherRepository.save(reviewTeacher);
     }
+    
+    // New:
+//    @Transactional
+//    public void flagReview(Integer id){
+//        ReviewTeacher reviewTeacher = reviewTeacherRepository.findOne(id);
+//        reviewTeacher.setFlagged("Flagged");
+//        reviewTeacherRepository.save(reviewTeacher);
+//    }
 
     @Transactional
     public void deleteReview(Integer id){
