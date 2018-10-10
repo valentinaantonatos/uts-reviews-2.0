@@ -109,9 +109,9 @@
                     <!--Add review content-->
                     <div class="form-group">
                         <label for="text">Content</label>
-                        <textarea name="text" id="teacherText" rows="10" class="form-control"></textarea>
+                        <textarea name="text" id="teacherText" name="teacherText" rows="10" class="form-control" maxlength="999" required></textarea>
                     </div>
-
+                    
                     <input type="hidden" name="id" id="teacherReviewId">
                 </form>
             </div>
