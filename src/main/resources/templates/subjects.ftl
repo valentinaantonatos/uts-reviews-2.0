@@ -168,7 +168,7 @@
                     <!--Add review content-->
                     <div class="form-group">
                         <label for="text">Content</label>
-                        <textarea name="text" id="subjectText" rows="10" class="form-control"></textarea>
+                        <textarea name="text" id="subjectText" rows="10" class="form-control" maxlength="999" required></textarea>
                     </div>
 
                     <input type="hidden" name="id" id="subjectReviewId">

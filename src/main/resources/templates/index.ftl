@@ -9,7 +9,7 @@
     <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 </head>
-<body background="/images/bg.jpg">
+<body background="/images/laurel.jpg">
     <nav class="navbar navbar-default" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">

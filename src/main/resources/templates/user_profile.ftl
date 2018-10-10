@@ -36,6 +36,7 @@
 </script>
     
 <div class="container">
+<!--    Hello, {$user.name} -->
     <form class="form-horizontal" method="post" action="/user_profile">
         <div class="form-group">
             <label class="col-sm-2 control-label">Old Password</label>
