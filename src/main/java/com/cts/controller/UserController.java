@@ -54,6 +54,32 @@ public class UserController {
     public String profilePage() {
         return "user_profile";
     }
+    
+    // Change Pass Attempt:
+    @RequestMapping(value = "/user_profile",method = RequestMethod.POST)
+    public ModelAndView profilePage(String oldPassword, String newPassword, String confirmPassword, HttpSession httpSession, ModelAndView modelAndView){
+        
+        // Issues binding this method to user_profiles page changePassword() function
+        
+        // Retrieve password data for user from database
+        User user  = (User) httpSession.getAttribute("user");
+        String password = user.getPassword();
+            
+        if(!oldPassword.equals(password)){
+            // password does not match old password
+        } else if (oldPassword.equals(newPassword)){
+            // new password must be different!
+        } else if (!newPassword.equals(confirmPassword)){
+            // pasword does not match confirm password!
+        } else { 
+            // change passwords
+            user.setPassword(newPassword); // currenly isn't working
+        }
+    
+        modelAndView.setViewName("redirect:/user_profile");
+        return modelAndView;
+    }
+    
 
     @RequestMapping(value = "/usr/login",method = RequestMethod.POST)
     public ModelAndView login(String username, String password, HttpSession httpSession, ModelAndView modelAndView){
@@ -175,6 +201,14 @@ public class UserController {
         return "redirect:/usr/views";
     }
 
+    // New: flag/{id} /teacher/${teacher.id}/reviews ... /teacher/${teacher.id}/reviews/flag/{id}
+//    @RequestMapping("/teacher/${teacher.id}/reviews/flag/{id}")
+//    public String flagTeacherReviews(@PathVariable("id")Integer recordId, @PathVariable("id") Integer id){
+//        teacherReviewService.getById(recordId);
+//        teacherReviewService.flagReview(id);
+//        return "redirect:/teacher/${teacher.id}/reviews";
+//    }
+    
     @RequestMapping("/usr/review/teacher/delete/{id}")
     public String deleteTeacherReviews(@PathVariable("id") Integer id){
         teacherReviewService.deleteReview(id);
