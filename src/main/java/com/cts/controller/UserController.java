@@ -85,7 +85,7 @@ public class UserController {
     public ModelAndView login(String username, String password, HttpSession httpSession, ModelAndView modelAndView){
         User user = userService.login(username,password);
         if (user==null){
-            modelAndView.addObject("message","Username or password is invalid!");
+            modelAndView.addObject("message","We're sorry. The username or password you entered is invalid.");
             modelAndView.setViewName("merror");
             return modelAndView;
         }
@@ -94,8 +94,11 @@ public class UserController {
         return modelAndView;
     }
 
+    // Updating:
     @RequestMapping(value = "/usr/register",method = RequestMethod.POST)
     public String register(User user, HttpSession httpSession){
+        // String username = user.getUsername();
+        
         userService.addUser(user);
         httpSession.setAttribute("user",user);
         return "redirect:/index";
@@ -227,4 +230,10 @@ public class UserController {
         httpSession.invalidate();
         return "redirect:/";
     }
+    
+    //I want this to grab the users name and show it on their profile page
+//    @RequestMapping("/usr/user_profile")
+//    public String myProfile(String name, HttpSession httpSession){
+//        httpSession.getAttribute("user", name);
+//        }
 }
