@@ -99,7 +99,7 @@
                   <!--<button class = "btn btn-primary" onClick = "flagReview()" > Flag </button>-->
                   <button id="flag" class="fa fa-flag" onClick = "confirmFlag('/subject/${id}/reviews/flag/${subjectReview.id}')">
                     </button>
-                    ${teacherReview.flagged}
+                    ${subjectReview.flagged}
                 </td>
     </tr>
 </#list>
