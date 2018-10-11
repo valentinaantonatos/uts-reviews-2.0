@@ -19,21 +19,21 @@
         <div class="form-group">
             <label class="col-sm-2 control-label">Real name</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="name" placeholder="Full name" required>
+                <input type="text" class="form-control" name="name" placeholder="Full name" maxlength="44" required>
             </div>
         </div>
 
         <div class="form-group">
             <label class="col-sm-2 control-label">Username</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="username" placeholder="Username" required>
+                <input type="text" class="form-control" name="username" placeholder="Username" maxlength="44" required>
             </div>
         </div>
 
         <div class="form-group">
             <label class="col-sm-2 control-label">Password</label>
             <div class="col-sm-10">
-                <input type="password" class="form-control" name="password" placeholder="Password" required>
+                <input type="password" class="form-control" name="password" placeholder="Password" maxlength="44" required>
             </div>
         </div>
 
@@ -44,7 +44,7 @@
             <div class="col-sm-10">
                 <button class="btn btn-primary" type="submit">Register</button>
             </div>
-            <a href="/login">Return to Login</a>
+            <a href="/">Return to Login</a>
         </div>
     </form>
 </div>

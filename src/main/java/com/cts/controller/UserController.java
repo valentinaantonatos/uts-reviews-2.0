@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
+import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 import java.util.List;
 
@@ -51,7 +52,13 @@ public class UserController {
 
     //New Stuff
     @RequestMapping(value = "/user_profile")
-    public String profilePage() {
+    public String profilePage(HttpServletRequest request, HttpSession httpSession) {
+        boolean change = true;
+        if (request.getParameter("passwordchange") == null) {
+            change = false;
+        }
+        httpSession.setAttribute("passwordUpdated", change);
+//        System.out.println(request.getParameter("passwordchange"));   
         return "user_profile";
     }
     
@@ -81,22 +88,22 @@ public class UserController {
     
     // Change Pass Attempt:
     @RequestMapping(value = "/user_profile/changepass",method = RequestMethod.POST)
-    public String changePassword(@RequestParam("newPassword")String password, HttpSession httpSession){
+    public String changePassword(@RequestParam("oldPassword")String oldPassword, @RequestParam("newPassword")String newPassword, @RequestParam("confirmPassword")String confirmPassword, HttpSession httpSession){
         User user  = (User) httpSession.getAttribute("user");
-        userService.changePassword(user, password);
-            
+       
 //        if(!oldPassword.equals(password)){
-//            // password does not match old password
+//            // popup: password does not match old password
 //        } else if (oldPassword.equals(newPassword)){
-//            // new password must be different!
+//            // popup: new password must be different!
 //        } else if (!newPassword.equals(confirmPassword)){
-//            // pasword does not match confirm password!
+//            // popup: pasword does not match confirm password!
 //        } else { 
 //            // change passwords
-//            user.setPassword(newPassword); // currently isn't working
+//            userService.changePassword(user, newPassword);
 //        }
+        userService.changePassword(user, newPassword);
 
-        return "redirect:/user_profile";
+        return "redirect:/user_profile?passwordchange=true";
     }
 
     @RequestMapping("/usr/views")
