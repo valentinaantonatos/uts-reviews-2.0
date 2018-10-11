@@ -88,6 +88,9 @@ window.onclick = function(event) {
             <label class="col-sm-2 control-label">Old Password</label>
             <div class="col-sm-10">
                 <input type="password" class="form-control" id="oldPassword" name="oldPassword" placeholder="Old Password" required>
+                <#if passwordUpdateRequested>
+                    ${error}                   
+                </#if>
             </div>
         </div>
 
@@ -111,9 +114,11 @@ window.onclick = function(event) {
             </div>
             <div class="col-sm-10">
                 <button id="myBtn" class="btn btn-success" type="submit" >Submit</button>
-                <#if passwordUpdated>
-                    Password has been updated!
+                <#if passwordUpdateRequested>
+                    <#if passwordUpdateSuccess>
+                        Password has been updated!
                     </#if>
+                </#if>
             </div>
 <!--
             <div id="message" name="message" >Enter your old and new password!

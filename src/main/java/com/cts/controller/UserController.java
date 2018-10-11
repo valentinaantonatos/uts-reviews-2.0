@@ -53,12 +53,15 @@ public class UserController {
     //New Stuff
     @RequestMapping(value = "/user_profile")
     public String profilePage(HttpServletRequest request, HttpSession httpSession) {
-        boolean change = true;
+        
         if (request.getParameter("passwordchange") == null) {
-            change = false;
+            httpSession.setAttribute("passwordUpdateRequested", false);
+//        System.out.println(request.getParameter("passwordchange"));
         }
-        httpSession.setAttribute("passwordUpdated", change);
-//        System.out.println(request.getParameter("passwordchange"));   
+        else {
+            httpSession.setAttribute("passwordUpdateRequested", true);
+        }
+           
         return "user_profile";
     }
     
@@ -90,18 +93,24 @@ public class UserController {
     @RequestMapping(value = "/user_profile/changepass",method = RequestMethod.POST)
     public String changePassword(@RequestParam("oldPassword")String oldPassword, @RequestParam("newPassword")String newPassword, @RequestParam("confirmPassword")String confirmPassword, HttpSession httpSession){
         User user  = (User) httpSession.getAttribute("user");
-       
-//        if(!oldPassword.equals(password)){
-//            // popup: password does not match old password
-//        } else if (oldPassword.equals(newPassword)){
-//            // popup: new password must be different!
-//        } else if (!newPassword.equals(confirmPassword)){
-//            // popup: pasword does not match confirm password!
-//        } else { 
-//            // change passwords
-//            userService.changePassword(user, newPassword);
-//        }
-        userService.changePassword(user, newPassword);
+        System.out.println(user.getPassword());
+        
+        if (user.getPassword().equals(oldPassword)) {
+            if (oldPassword.equals(newPassword)) {
+                userService.changePassword(user, newPassword);
+                httpSession.setAttribute("passwordUpdateSuccess", true);
+                httpSession.setAttribute("error", "");
+            } 
+            else {
+                httpSession.setAttribute("error", "Passwords do not match");
+                httpSession.setAttribute("passwordUpdateSuccess", false);
+            }
+
+        } 
+        else {
+            httpSession.setAttribute("error", "Wrong password");
+            httpSession.setAttribute("passwordUpdateSuccess", false);
+        }
 
         return "redirect:/user_profile?passwordchange=true";
     }

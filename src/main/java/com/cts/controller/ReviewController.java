@@ -1,5 +1,7 @@
 package com.cts.controller;
 
+import java.util.List;
+
 import com.cts.dao.SubjectRepository;
 import com.cts.dao.TeacherRepository;
 import com.cts.service.SubjectReviewService;
@@ -9,6 +11,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.cts.entity.ReviewTeacher;
+import com.cts.entity.ReviewSubject;
 
 @Controller
 public class ReviewController {
@@ -50,16 +55,41 @@ public class ReviewController {
     @RequestMapping("/teacher/{id}/reviews")
     public ModelAndView teacherReviews(@PathVariable("id") Integer id){
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("teacherReviews",teacherReviewService.getByTeacherId(id));
-        modelAndView.setViewName("teacher_reviews");
+        
+        
+        List<ReviewTeacher> teacher = teacherReviewService.getByTeacherId(id);
+        
+        
+        modelAndView.addObject("teacherReviews",teacher);
+        
+        
+        
+        
+        if (teacher.isEmpty()) {
+            modelAndView.setViewName("teacher_no_reviews");
+        }
+        else {
+            modelAndView.setViewName("teacher_reviews");
+        }
+        
         return modelAndView;
     }
 
     @RequestMapping("/subject/{id}/reviews")
     public ModelAndView subjectReviews(@PathVariable("id") Integer id){
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("subjectReviews",subjectReviewService.getBySubjectId(id));
-        modelAndView.setViewName("subject_reviews");
+        
+        List<ReviewSubject> subject = subjectReviewService.getBySubjectId(id);
+        
+        modelAndView.addObject("subjectReviews", subject);
+        
+        if (subject.isEmpty()) {
+        modelAndView.setViewName("subject_no_reviews");
+        }
+        else {
+            modelAndView.setViewName("subject_reviews");
+        }
+        
         return modelAndView;
     }
 }
