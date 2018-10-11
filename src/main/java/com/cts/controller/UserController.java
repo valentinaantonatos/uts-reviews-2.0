@@ -211,6 +211,12 @@ public class UserController {
 //        teacherReviewService.flagReview(id);
 //        return "redirect:/teacher/${teacher.id}/reviews";
 //    }
+    @RequestMapping("/teacher/{id}/reviews/flag/{recordid}")
+    public String flagTeacherReviews(@PathVariable("id")Integer id, @PathVariable("recordid")Integer recordId){
+        teacherReviewService.getById(id);
+        teacherReviewService.flagTeacherReview(recordId);
+        return "redirect:/teacher/{id}/reviews";
+    }
     
     @RequestMapping("/usr/review/teacher/delete/{id}")
     public String deleteTeacherReviews(@PathVariable("id") Integer id){

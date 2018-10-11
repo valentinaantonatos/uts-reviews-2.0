@@ -35,27 +35,39 @@
     }
 </script>
     
+<script>
+    function resetPassword(){
+        var x = document.getElementById("message");
+        if (document.getElementById('newPassword').value !=
+            document.getElementById('confirmPassword').value) {
+            x.innerHTML = "New password doesnt match!";
+        } else {
+            x.innerHTML = "Goodbye!";
+        }
+    }
+</script>
+    
 <div class="container">
 <!--    Hello, {$user.name} -->
     <form class="form-horizontal" method="post" action="/user_profile">
         <div class="form-group">
             <label class="col-sm-2 control-label">Old Password</label>
             <div class="col-sm-10">
-                <input type="password" class="form-control" name="oldPassword" placeholder="Old Password" required>
+                <input type="password" class="form-control" id="oldPassword" name="oldPassword" placeholder="Old Password" required>
             </div>
         </div>
 
         <div class="form-group">
             <label class="col-sm-2 control-label">New Password</label>
             <div class="col-sm-10">
-                <input type="password" class="form-control" name="newPassword" placeholder="New Password" required>
+                <input type="password" class="form-control" id="newPassword" name="newPassword" placeholder="New Password" required>
             </div>
         </div>
         
         <div class="form-group">
             <label class="col-sm-2 control-label">Confirm New Password</label>
             <div class="col-sm-10">
-                <input type="password" class="form-control" name="confirmPassword" placeholder="New Password" required>
+                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="New Password" required>
             </div>
         </div>
 
@@ -64,11 +76,11 @@
 
             </div>
             <div class="col-sm-10">
-                <button class="btn btn-success" onclick="changePassword()" type="button">Submit</button>
+                <button class="btn btn-success" onclick="resetPassword()" type="button">Submit</button>
 <!--                <button class="btn btn-primary" type="submit">Login</button>-->
             </div>
+            <div id="message" name="message" >Enter your old and new password!</div>
         </div>
-        <div id="profileFeedback" >Enter your old and new password!</div>
     </form>
 </div>
 
