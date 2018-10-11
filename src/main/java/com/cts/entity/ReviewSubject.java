@@ -9,7 +9,7 @@ public class ReviewSubject {
     public ReviewSubject(){
         text = "Default";
         overallRating = 0;
-        flagged = false;
+        flagged = "Unflagged";
     }
 
     @Id
@@ -50,7 +50,7 @@ public class ReviewSubject {
     private String mark;
 
     @Column(name = "flagged")
-    private Boolean flagged;
+    private String flagged;
 
     public Integer getId() {
         return id;
@@ -112,11 +112,11 @@ public class ReviewSubject {
         this.difficulty = difficulty;
     }
 
-    public Boolean getFlagged() {
+    public String getFlagged() {
       return flagged;
     }
 
-    public void setFlagged(Boolean flagged) {
+    public void setFlagged(String flagged) {
       this.flagged = flagged;
     }
 

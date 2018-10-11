@@ -3,7 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="../resources/static/images/eggplant.png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>${subjectReviews[0].subject.title} Reviews - UTSReviews</title>
+    
+    <style>
+            .fa {
+                font-size: 40px;
+                cursor: pointer;
+                user-select: none;
+            }
+
+            .fa:hover {
+                color: darkblue;
+            }
+        </style>
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
@@ -16,6 +29,22 @@
           ${subjectReviews[0]}.setFlagged(1);
         }
     </script>
+    
+     <!-- Flag Modal -->
+        <script>
+            function confirmFlag(url){
+            if(confirm("Are you sure you want to flag?")){
+              window.location.href = url;
+            }
+            var x = document.getElementById("myDIV"); 
+            if (x.innerHTML === "Unflagged!") {
+                x.innerHTML = "Flagged!";
+            } else {
+                x.innerHTML = "Flagged!";   
+            }
+                
+          }
+        </script>
 </head>
 <body>
 
@@ -63,14 +92,16 @@
         <td>${subjectReview.overallRating}</td>
         <td>${subjectReview.difficulty}</td>
 
-        <!-- Flag Reviews -->
-        <td>
-          <input type = "checkbox" name = "flagged" value = "flagReview"><br>
-          <!--<input type = "submit" value = "Submit"><br> -->
-          <button class = "btn btn-primary" onClick = "flagReview()">
-            Flag
-          </button>
-        </td>
+         <!-- Flag Reviews -->
+                <td>
+                  <!--<input type = "checkbox" name = "flagged" value = "flagReview"><br>-->
+                  <!--<input type = "submit" value = "Submit"><br>-->
+                  <!--<button class = "btn btn-primary" onClick = "flagReview()" > Flag </button>-->
+                  <button id="flag" class="fa fa-flag" onClick = "confirmFlag('/subject/${id}/reviews/flag/${subjectReview.id}')">
+                    </button>
+                    ${teacherReview.flagged}
+                    
+                </td>
     </tr>
 </#list>
 </table>
