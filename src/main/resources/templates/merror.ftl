@@ -14,6 +14,6 @@
 </head>
 <body>
     <h2 class=link> ${message}</h2>
-    <a href="/login">Return to Login to Try Again</a>
+    <a href="/">Return to Login to Try Again</a>
 </body>
 </html>
