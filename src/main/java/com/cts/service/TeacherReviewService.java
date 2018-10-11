@@ -34,7 +34,7 @@ public class TeacherReviewService {
     }
 
     @Transactional
-    public void updateReview(Integer id,String text, Integer overallRating){
+    public void updateReview(Integer id, String text, Integer overallRating){
         ReviewTeacher reviewTeacher = reviewTeacherRepository.findOne(id);
         reviewTeacher.setText(text);
         reviewTeacher.setDate(new Date());
@@ -43,12 +43,12 @@ public class TeacherReviewService {
     }
     
     // New:
-//    @Transactional
-//    public void flagReview(Integer id){
-//        ReviewTeacher reviewTeacher = reviewTeacherRepository.findOne(id);
-//        reviewTeacher.setFlagged("Flagged");
-//        reviewTeacherRepository.save(reviewTeacher);
-//    }
+    @Transactional
+    public void flagTeacherReview(Integer id){
+        ReviewTeacher reviewTeacher = reviewTeacherRepository.findOne(id);
+        reviewTeacher.setFlagged("Flagged");
+        reviewTeacherRepository.save(reviewTeacher);
+    }
 
     @Transactional
     public void deleteReview(Integer id){

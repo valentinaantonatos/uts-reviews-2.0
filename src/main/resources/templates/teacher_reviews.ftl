@@ -33,10 +33,16 @@
         
         <!-- Flag Modal -->
         <script>
-            function confirmFlag(){
+            function confirmFlag(url){
             if(confirm("Are you sure you want to flag?")){
               window.location.href = url;
             }
+//            var x = document.getElementById("myDIV"); 
+//            if (x.innerHTML === "Unflagged!") {
+//                x.innerHTML = "Flagged!";
+//            } else {
+//                x.innerHTML = "Flagged!";   
+//            }
                 
           }
         </script>
@@ -117,63 +123,14 @@
                   <!--<input type = "checkbox" name = "flagged" value = "flagReview"><br>-->
                   <!--<input type = "submit" value = "Submit"><br>-->
                   <!--<button class = "btn btn-primary" onClick = "flagReview()" > Flag </button>-->
-                  <button id="flag" class="fa fa-flag" onClick = "confirmFlag()" >
+                  <button id="flag" class="fa fa-flag" onClick = "confirmFlag('/teacher/${id}/reviews/flag/${teacherReview.id}')">
                     </button>
-                        <div id="myDIV">Unflagged!</div>
+                        <div id="myDIV" runat="Server">Unflagged!</div>
                     
                 </td>
             </tr>
         </#list>
     </table>
-        
-    
-<!-- Test Code below -->
-<!-- 模态框（Modal） -->
-<div class="modal fade" id="teacherModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="teacherModalLabel">Teacher Review</h4>
-            </div>
-            <div class="modal-body">
-                <form role="form" method="post" id="teacherForm" name="teacherForm">
-                  <!--Select teacher to review-->
-                    <div class="form-group">
-                        <label for="teacherId">Teacher</label>
-                        <select name="teacherId" id="teacherId" class="form-control">
-
-                        </select>
-                    </div>
-
-                     <!-- Attempt for Rating-->
-                      <div class="form-group">
-                        <label for="teacherRatingId">Rating</label>
-                        <select name="teacherRating" id="teacherRating" class="form-control">
-                          <option value="1" selected="selected">1 Worst</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5 Best</option>
-                        </select>
-                      </div>
-
-                    <!--Add review content-->
-                    <div class="form-group">
-                        <label for="text">Content</label>
-                        <textarea name="text" id="teacherText" name="teacherText" rows="10" class="form-control" maxlength="999" required></textarea>
-                    </div>
-                    
-                    <input type="hidden" name="id" id="teacherReviewId">
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <button type="submit" class="btn btn-primary" form="teacherForm">Submit</button>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal -->
-</div>
 
 </body>
 </html>

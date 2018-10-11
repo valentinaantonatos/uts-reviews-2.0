@@ -48,6 +48,15 @@ public class ReviewController {
         modelAndView.setViewName("teacher_reviews");
         return modelAndView;
     }
+    
+    // New: flag/{id} /teacher/${teacher.id}/reviews ... /teacher/${teacher.id}/reviews/flag/{id}
+//    @RequestMapping("/teacher/{id}/reviews/flag")
+//    public ModelAndView flagTeacherReview(@PathVariable("id") Integer id){
+//        ModelAndView modelAndView = new ModelAndView();
+//        modelAndView.addObject("teacherReviews",teacherReviewService.getByTeacherId(id));
+//        modelAndView.setViewName("teacher_reviews");
+//        return modelAndView;
+//    }
 
     @RequestMapping("/subject/{id}/reviews")
     public ModelAndView subjectReviews(@PathVariable("id") Integer id){
