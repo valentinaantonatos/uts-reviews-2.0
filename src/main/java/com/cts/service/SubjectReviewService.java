@@ -42,6 +42,14 @@ public class SubjectReviewService {
         reviewSubject.setOverallRating(overallRating);
         reviewSubjectRepository.save(reviewSubject);
     }
+    
+    // New:
+    @Transactional
+    public void flagSubjectReview(Integer id){
+        ReviewSubject reviewSubject = reviewSubjectRepository.findOne(id);
+        reviewSubject.setFlagged("Flagged");
+        reviewSubjectRepository.save(reviewSubject);
+    }
 
     @Transactional
     public void deleteReview(Integer id){

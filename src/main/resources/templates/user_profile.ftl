@@ -28,28 +28,48 @@
         </div>
     </div>
 </nav>
+
+<!--
+    <script type = "text/javascript">
+            function newPassword() {
+            $('#profileForm').prop('action','/user_profile/changepass');
+            $.ajax(
+                    {
+                        type:'get',
+                        dataType: 'json',
+                        url: '/user_profile',
+                        success: function (result) {
+                            changePassword();
+                        }
+                    }
+            );
+        }
+    </script>
+-->
+    
     
 <script type="text/javascript">
     function changePassword() {
-        window.location.href='/user_profile';
+        window.location.href='/user_profile/changepass';
     }
 </script>
     
-<script>
+<script type="text/javascript">
     function resetPassword(){
-        var x = document.getElementById("message");
-        if (document.getElementById('newPassword').value !=
-            document.getElementById('confirmPassword').value) {
+       var x = document.getElementById("message");
+        if (document.getElementById('newPassword').value != document.getElementById('confirmPassword').value) {
             x.innerHTML = "New password doesnt match!";
         } else {
-            x.innerHTML = "Goodbye!";
+            x.innerHTML = "New passwords match!";
+            changePassword();
         }
+        
     }
 </script>
     
 <div class="container">
-<!--    Hello, {$user.name} -->
-    <form class="form-horizontal" method="post" action="/user_profile">
+<h1> Hello, ${user.name} </h1>
+    <form class="form-horizontal" method="post" name="userForm" action="/user_profile/changepass">
         <div class="form-group">
             <label class="col-sm-2 control-label">Old Password</label>
             <div class="col-sm-10">
@@ -76,8 +96,8 @@
 
             </div>
             <div class="col-sm-10">
-                <button class="btn btn-success" onclick="resetPassword()" type="button">Submit</button>
-<!--                <button class="btn btn-primary" type="submit">Login</button>-->
+                <button class="btn btn-success" type="submit">Submit</button>
+<!--                <button class="btn btn-primary" type="submit">Login</button>  onclick="resetPassword()"-->
             </div>
             <div id="message" name="message" >Enter your old and new password!</div>
         </div>

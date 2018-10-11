@@ -37,12 +37,6 @@
             if(confirm("Are you sure you want to flag?")){
               window.location.href = url;
             }
-//            var x = document.getElementById("myDIV"); 
-//            if (x.innerHTML === "Unflagged!") {
-//                x.innerHTML = "Flagged!";
-//            } else {
-//                x.innerHTML = "Flagged!";   
-//            }
                 
           }
         </script>
@@ -125,7 +119,7 @@
                   <!--<button class = "btn btn-primary" onClick = "flagReview()" > Flag </button>-->
                   <button id="flag" class="fa fa-flag" onClick = "confirmFlag('/teacher/${id}/reviews/flag/${teacherReview.id}')">
                     </button>
-                        <div id="myDIV" runat="Server">Unflagged!</div>
+                    ${teacherReview.flagged}
                     
                 </td>
             </tr>

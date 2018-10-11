@@ -26,5 +26,12 @@ public class UserService {
     public User login(String username, String password){
         return userRepository.login(username,password);
     }
+    
+    // New
+    @Transactional
+    public void changePassword(User u, String password){
+        u.setPassword(password);
+        userRepository.save(u); 
+    }
 
 }
