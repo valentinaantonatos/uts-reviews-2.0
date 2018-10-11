@@ -100,7 +100,6 @@
                   <button id="flag" class="fa fa-flag" onClick = "confirmFlag('/subject/${id}/reviews/flag/${subjectReview.id}')">
                     </button>
                     ${teacherReview.flagged}
-                    
                 </td>
     </tr>
 </#list>

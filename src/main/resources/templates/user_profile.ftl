@@ -29,24 +29,38 @@
     </div>
 </nav>
 
-<!--
-    <script type = "text/javascript">
-            function newPassword() {
-            $('#profileForm').prop('action','/user_profile/changepass');
-            $.ajax(
-                    {
-                        type:'get',
-                        dataType: 'json',
-                        url: '/user_profile',
-                        success: function (result) {
-                            changePassword();
-                        }
-                    }
-            );
-        }
-    </script>
--->
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Password has been updated.</p>
+  </div>
+
+</div>
     
+    
+<script>
+
+var modal = document.getElementById('myModal');
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
     
 <script type="text/javascript">
     function changePassword() {
@@ -96,10 +110,15 @@
 
             </div>
             <div class="col-sm-10">
-                <button class="btn btn-success" type="submit">Submit</button>
-<!--                <button class="btn btn-primary" type="submit">Login</button>  onclick="resetPassword()"-->
+                <button id="myBtn" class="btn btn-success" type="submit" >Submit</button>
+                <#if passwordUpdated>
+                    Password has been updated!
+                    </#if>
             </div>
-            <div id="message" name="message" >Enter your old and new password!</div>
+<!--
+            <div id="message" name="message" >Enter your old and new password!
+            </div>
+-->
         </div>
     </form>
 </div>
