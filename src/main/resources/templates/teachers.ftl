@@ -64,13 +64,15 @@
 <div class="text-center">
     <h2>Teacher Reviews</h2>
 </div>
-<div>
+
+<div class="col-md-7 col-sm-12">
   <button class="btn btn-primary" onclick="addTeacherReview()">
     Create Teacher Review
   </button>
 </div>
 
-<table class="table table-bordered">
+<div class="container-fluid">
+<table class="table table-striped" class="col-md-7 col-sm-12">
     <tr>
         <th>Name</th>
         <th>Description</th>
@@ -88,6 +90,7 @@
         </tr>
     </#list>
 </table>
+</div>
 
 <!-- Test Code below -->
 <!-- 模态框（Modal） -->

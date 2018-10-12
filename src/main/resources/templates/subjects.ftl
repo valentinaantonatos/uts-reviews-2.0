@@ -86,19 +86,20 @@
     <h2>Subject Reviews</h2>
   </div>
     
-<div>
+<div class="col-md-7 col-sm-12">
   <button class="btn btn-success" onclick="addSubjectReview()">
       Create Subject Review
   </button>
 </div>
 
-<table class="table table-bordered">
-    <tr>
-        <th>Title</th>
-        <th>Course Number</th>
-        <th>Description</th>
-        <th>Operations</th>
-    </tr>
+<div class="container-fluid">
+    <table class="table table-striped" class="col-md-7 col-sm-12">
+        <tr>
+            <th>Title</th>
+            <th>Course Number</th>
+            <th>Description</th>
+            <th>Operations</th>
+        </tr>
     <#list subjects as subject>
         <tr>
             <td>${subject.title}</td>
@@ -111,7 +112,8 @@
             </td>
         </tr>
     </#list>
-</table>
+    </table>
+</div>
 
 
 <!-- Test Code below -->

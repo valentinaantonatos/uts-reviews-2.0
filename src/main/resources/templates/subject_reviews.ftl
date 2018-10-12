@@ -18,6 +18,12 @@
             .fa:hover {
                 color: darkblue;
             }
+            .navbar-header > a > span{
+                padding: 5px;
+            }
+            .navbar-nav > li > a > span{
+                padding: 5px;
+            }
         </style>
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -74,8 +80,9 @@
         <h2>There are no reviews for ${subjectReviews[0].subject.title}</h2>
     </#if>
 </div>
-
-<table class="table table-bordered">
+    
+<div class="container-fluid">
+<table class="table table-striped">
     <tr>
         <th>User Name</th>
         <th>Review</th>
@@ -106,6 +113,7 @@
     </tr>
 </#list>
 </table>
+</div>
 
 </body>
 </html>

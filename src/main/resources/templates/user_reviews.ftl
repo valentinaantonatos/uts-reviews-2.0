@@ -151,7 +151,8 @@
     </div>
   </nav>
 
-  <div>
+<!--
+  <div class="col-md-7 col-sm-12">
     <button class="btn btn-primary" onclick="addTeacherReview()">
       Create Teacher Review
     </button>
@@ -160,12 +161,20 @@
       Create Subject Review
     </button>
   </div>
+-->
+ 
+    <div class=text-center>
+        <h2>My Teacher Reviews</h2>
+    </div>
 
-  <div class="text-center">
-    <h2>My Teacher Reviews</h2>
-  </div>
+    <div class="col-md-7 col-sm-12">
+        <button class="btn btn-primary" onclick="addTeacherReview()">
+            Create Teacher Review
+        </button>
+    </div>
 
-  <table class="table table-bordered">
+<div class="container-fluid">
+  <table class="table table-striped" class="col-md-7 col-sm-12">
     <tr>
       <th>Name</th>
       <th>Review</th>
@@ -190,12 +199,20 @@
     </tr>
     </#list>
   </table>
+</div>
 
   <div class="text-center">
     <h2>My Subject Reviews</h2>
   </div>
+    
+    <div class="col-md-7 col-sm-12">
+    <button class="btn btn-success" onclick="addSubjectReview()">
+      Create Subject Review
+    </button>
+  </div>
 
-  <table class="table table-bordered">
+<div class="container-fluid">
+  <table class="table table-striped" class="col-md-7 col-sm-12">
     <tr>
         <th>Subject Title</th>
         <th>Review</th>
@@ -225,6 +242,7 @@
     </tr>
     </#list>
   </table>
+</div>
 
   <!-- 模态框（Modal） -->
   <div class="modal fade" id="teacherModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -299,7 +317,7 @@
                 <option value="High Distinction">High Distinction</option>
                 <option value="Distinction">Distinction</option>
                 <option value="Credit">Credit</option>
-                <option value="Pass">Pass</option>
+                <option value="Pass" selected="selected">Pass</option>
                 <option value="Fail">Fail</option>
               </select>
             </div>
@@ -338,9 +356,7 @@
               </script>
 
             </select>
-
-
-          </div>
+            </div>
 
           <!--Add review content-->
           <div class="form-group">
@@ -358,6 +374,7 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal -->
 </div>
+
 
 </body>
 </html>
