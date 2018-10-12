@@ -51,49 +51,6 @@
 
 </div>
     
-    
-<!--
-<script>
-
-var modal = document.getElementById('myModal');
-var btn = document.getElementById("myBtn");
-var span = document.getElementsByClassName("close")[0];
-
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
-    
-<script type="text/javascript">
-    function changePassword() {
-        window.location.href='/user_profile/changepass';
-    }
-</script>
-    
-<script type="text/javascript">
-    function resetPassword(){
-       var x = document.getElementById("message");
-        if (document.getElementById('newPassword').value != document.getElementById('confirmPassword').value) {
-            x.innerHTML = "New password doesn't match!";
-        } else {
-            x.innerHTML = "New passwords match!";
-            changePassword();
-        }
-        
-    }
-</script>
--->
-    
 <div class="container">
 <h1> Hello, ${user.name} </h1>
 <h3>You can update your password below:</h3>

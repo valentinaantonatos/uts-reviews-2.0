@@ -1,19 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="../resources/static/images/eggplant.png"/>
-    <title>No Teacher Reviews</title>
+    <style>
+        @import "lesshat";
+        @import url(https://fonts.googleapis.com/css?family=Roboto);
+        html { 
+          background:  url(https://media.giphy.com/media/3o7TKOKvE22430hZNm/giphy.gif) no-repeat center center fixed; 
+          background-size: cover;
+          font-family: 'Roboto', sans-serif;
 
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-</head>
-<body>
-    <div class="text-center" class="align-middle">
-        <h3>Sorry, there are currently no reviews for this teacher</h3>
-         <a href="/teacher/list">Return to Teachers to create a new review</a>
-    </div>
-</body>
+        }
+        h1{
+          font-size: 2em;
+          margin: .2em .5em;
+          color: aliceblue;
+          margin-bottom:0px;
+        }
+        h2{
+          font-size: 1.7em;
+          margin: .2em .5em;
+          color: aliceblue;
+            .material-icons {
+                font-size: 1.5em;
+                position: relative;
+                top: 10px;
+            }
+        }
+        div.error{
+          position:absolute;
+          top:30%;
+          margin-top:-8em;
+          width:100%;
+          text-align:center;
+        }
+        div.error > h2 > a {
+            color:aliceblue;
+        }
+    </style>
+    
+    <head>
+    <meta charset="UTF-8">
+    <title>No Teacher Reviews</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    </head>
+        <div class="error">
+            <h1>Sorry, there are currently no reviews for this teacher</h1>
+            <h2>Return to <a href="/teacher/list">Teachers</a> to create a new review</h2>
+        </div>
 </html>

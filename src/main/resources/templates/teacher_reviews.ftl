@@ -35,7 +35,6 @@
 
         <script type = "text/javascript">
             //Flag review code here
-            //Needs to change the TINYINT value from 0 to 1
             function flagReview() {
               ${teacherReviews[0]}.setFlagged(1);
             }
@@ -107,8 +106,9 @@
             <h2>There are no reviews for ${teacherReviews[0].teacher.name}</h2>
         </#if>
     </div>
-
-    <table class="table table-bordered">
+        
+    <div class="container-fluid">
+    <table class="table table-striped">
         <tr>
             <th>User Name</th>
             <th>Review</th>
@@ -136,6 +136,6 @@
             </tr>
         </#list>
     </table>
-
+        </div>
 </body>
 </html>

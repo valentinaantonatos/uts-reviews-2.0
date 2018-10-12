@@ -9,7 +9,7 @@
             }
         .heading {
             float: none; 
-            margin: 0 auto; 
+            margin: auto;
             text-align: center; 
             display: block; 
             width: auto; 
@@ -34,7 +34,7 @@
     <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 </head>
-<body class="background" background="/images/laurel.jpg">
+<body class="background" background="/images/laurel1.jpg">
     <nav class="navbar navbar-default" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -52,10 +52,10 @@
         </div>
     </nav>
 
-    <div class="text-center" class="align-middle">
-        <h1 class="heading">Welcome to UTSReviews</h1>
+    <div class="heading" class="text-center" class="align-middle">
+<!--        <h1>Welcome to UTSReviews</h1>-->
 <!--        <h2 class="heading">Review UTS Tutors and Subjects</h2>-->
-        <h2 class="heading">Your uni. Your voice.</h2>
+<!--        <h2>Your uni. Your voice.</h2>-->
     </div>
 </body>
 </html>
