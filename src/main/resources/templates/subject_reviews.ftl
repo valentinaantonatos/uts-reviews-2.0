@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <link rel="icon" href="../resources/static/images/eggplant.png"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
     <title>${subjectReviews[0].subject.title} Reviews - UTSReviews</title>
     
     <style>
@@ -51,15 +53,15 @@
 <nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="/index">Home</a>
+            <a class="navbar-brand" href="/index"><span class="glyphicon glyphicon-education"></span>Home</a>
         </div>
         <div>
             <ul class="nav navbar-nav">
-                <li><a href="/teacher/list">Teachers</a></li>
-                <li class="active"><a href="/subject/list">Subjects</a></li>
-                <li><a href="/usr/views">My Reviews</a></li>
-                <li><a href = "/user_profile">My Profile</a></li>
-                <li class="pull-right"><a href="/usr/logout">Logout</a></li>
+                <li><a href="/teacher/list"><span class="glyphicon glyphicon-pencil"></span>Teachers</a></li>
+                <li class="active"><a href="/subject/list"><span class="glyphicon glyphicon-book"></span>Subjects</a></li>
+                <li><a href="/usr/views"><span class="glyphicon glyphicon-edit"></span>My Reviews</a></li>
+                <li><a href = "/user_profile"><span class="glyphicon glyphicon-user"></span>My Profile</a></li>
+                <li class="pull-right"><a href="/usr/logout"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
             </ul>
         </div>
     </div>

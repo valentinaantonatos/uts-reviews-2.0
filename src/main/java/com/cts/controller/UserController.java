@@ -56,7 +56,7 @@ public class UserController {
         
         if (request.getParameter("passwordchange") == null) {
             httpSession.setAttribute("passwordUpdateRequested", false);
-//        System.out.println(request.getParameter("passwordchange"));
+            //System.out.println(request.getParameter("passwordchange"));
         }
         else {
             httpSession.setAttribute("passwordUpdateRequested", true);
@@ -93,17 +93,21 @@ public class UserController {
     @RequestMapping(value = "/user_profile/changepass",method = RequestMethod.POST)
     public String changePassword(@RequestParam("oldPassword")String oldPassword, @RequestParam("newPassword")String newPassword, @RequestParam("confirmPassword")String confirmPassword, HttpSession httpSession){
         User user  = (User) httpSession.getAttribute("user");
-        System.out.println(user.getPassword());
+        //System.out.println(user.getPassword());
         
         if (user.getPassword().equals(oldPassword)) {
-            if (oldPassword.equals(newPassword)) {
+            //System.out.println("1");
+            if (newPassword.equals(confirmPassword)) {
                 userService.changePassword(user, newPassword);
+                //System.out.println("2");
+                
                 httpSession.setAttribute("passwordUpdateSuccess", true);
                 httpSession.setAttribute("error", "");
             } 
             else {
                 httpSession.setAttribute("error", "Passwords do not match");
                 httpSession.setAttribute("passwordUpdateSuccess", false);
+                //System.out.println("3");
             }
 
         } 
