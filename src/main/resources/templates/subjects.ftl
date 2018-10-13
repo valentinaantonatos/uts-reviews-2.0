@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
     <style>
         .navbar-header > a > span{
             padding: 5px;
@@ -9,12 +9,12 @@
             padding: 5px;
         }
     </style>
-    
+
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="../resources/static/images/eggplant.png"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    
+
     <title>Subject Reviews - UTSReviews</title>
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -81,11 +81,11 @@
         </div>
     </div>
 </nav>
-    
+
 <div class="text-center">
     <h2>Subject Reviews</h2>
   </div>
-    
+
 <div class="col-md-7 col-sm-12">
   <button class="btn btn-success" onclick="addSubjectReview()">
       Create Subject Review
@@ -141,10 +141,11 @@
                     <div class = "form-group">
                       <label for = "mark">Mark</label>
                       <select name="mark" id="mark" class="form-control">
+                        <option disabled selected value> -- select a grade -- </option>
                         <option value="High Distinction">High Distinction</option>
                         <option value="Distinction">Distinction</option>
                         <option value="Credit">Credit</option>
-                        <option value="Pass" selected="selected">Pass</option>
+                        <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                       </select>
                     </div>
@@ -154,7 +155,8 @@
                     <div class="form-group">
                       <label for="subjectRatingId">Rating</label>
                       <select name="subjectRatingId" id="subjectRatingId" class="form-control">
-                        <option value="1" selected="selected">1 Worst</option>
+                        <option disabled selected value> -- select a rating -- </option>
+                        <option value="1">1 Worst</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
@@ -169,7 +171,7 @@
                       <!--<input name="difficulty" type = "text" id = "difficulty"  class = "form-control">-->
 
                       <div class="slidecontainer">
-                        <input name="difficulty" type="range" min="1" max="5" value="50" class="slider" id="myRange">
+                        <input name="difficulty" type="range" min="1" max="5" value="3" class="slider" id="myRange">
                         <p> Value: <span name="difficultyValue" id="difficultyValue" ></span></p>
                       </div>
 
