@@ -112,7 +112,7 @@ public class UserController {
 
         } 
         else {
-            httpSession.setAttribute("error", "Wrong password");
+            httpSession.setAttribute("error", "Old password is wrong");
             httpSession.setAttribute("passwordUpdateSuccess", false);
         }
 
