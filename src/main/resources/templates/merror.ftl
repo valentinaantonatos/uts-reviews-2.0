@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+
+<!--The code for all the basic error pages on this website (merror.ftl, error.ftl, subject_no_reviews.ftl, teacher_no_reviews.ftl) was modified from a template on https://colorlib.com/wp/free-error-page-templates/ -->
+
 <html lang="en">
     <style>
         @import "lesshat";
