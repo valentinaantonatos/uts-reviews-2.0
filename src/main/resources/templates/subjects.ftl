@@ -154,11 +154,11 @@
                     <div class="form-group">
                       <label for="subjectRatingId">Rating</label>
                       <select name="subjectRatingId" id="subjectRatingId" class="form-control">
-                        <option value="1" selected="selected">1 Worst</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 Best</option>
+                        <option value="1">1 Very Dissatisfied</option>
+                        <option value="2">2 Dissatisfied</option>
+                        <option value="3" selected="selected">3 Neutral</option>
+                        <option value="4">4 Satisfied</option>
+                        <option value="5">5 Very Satisfied</option>
                       </select>
                     </div>
 
@@ -169,7 +169,7 @@
                       <!--<input name="difficulty" type = "text" id = "difficulty"  class = "form-control">-->
 
                       <div class="slidecontainer">
-                        <input name="difficulty" type="range" min="1" max="5" value="50" class="slider" id="myRange">
+                        <input name="difficulty" type="range" min="1" max="5" value="3" class="slider" id="myRange">
                         <p> Value: <span name="difficultyValue" id="difficultyValue" ></span></p>
                       </div>
 
