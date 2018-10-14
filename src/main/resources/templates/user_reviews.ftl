@@ -167,12 +167,14 @@
         <h2>My Teacher Reviews</h2>
     </div>
 
+<!--
     <div class="col-md-7 col-sm-12">
         <button class="btn btn-primary" onclick="addTeacherReview()">
             Create Teacher Review
         </button>
         <p> </p>
     </div>
+-->
 
 <div class="container-fluid">
   <table class="table table-striped" class="col-md-7 col-sm-12">
@@ -206,12 +208,14 @@
     <h2>My Subject Reviews</h2>
   </div>
     
+<!--
     <div class="col-md-7 col-sm-12">
     <button class="btn btn-success" onclick="addSubjectReview()">
       Create Subject Review
     </button>
     <p> </p>
   </div>
+-->
 
 <div class="container-fluid">
   <table class="table table-striped" class="col-md-7 col-sm-12">
