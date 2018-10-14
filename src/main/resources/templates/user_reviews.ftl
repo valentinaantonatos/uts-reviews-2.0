@@ -79,7 +79,7 @@
         url: '/usr/review/teacher/list',
         success: function (result) {
           for(var i=0;i<result.length;i++){
-            $('#teacherId').append('<option value="'+result[i].id+'">'+result[i].courseNumber+' '+result[i].name+'</option>');
+            $('#teacherId').append('<option value="'+result[i].id+'">'+result[i].name+'</option>');
           }
 
           $.ajax({
@@ -356,8 +356,6 @@
                 output.innerHTML = this.value;
               }
               </script>
-
-            </select>
             </div>
 
           <!--Add review content-->

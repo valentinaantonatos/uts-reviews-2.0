@@ -182,7 +182,7 @@
                       }
                       </script>
 
-                    </select>
+                    
 
                     <!--Add review content-->
                     <div class="form-group">
@@ -191,14 +191,16 @@
                     </div>
 
                     <input type="hidden" name="id" id="subjectReviewId">
-                </form>
-            </div>
+                
+                </div>
+            </form>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                 <button type="submit" class="btn btn-primary" form="subjectForm">Submit</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal -->
+</div>
 </div>
 
 

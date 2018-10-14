@@ -107,9 +107,7 @@
                   <!--Select teacher to review-->
                     <div class="form-group">
                         <label for="teacherId">Teacher</label>
-                        <select name="teacherId" id="teacherId" class="form-control">
-
-                        </select>
+                        <select name="teacherId" id="teacherId" class="form-control"></select>
                     </div>
 
                      <!-- Attempt for Rating-->
