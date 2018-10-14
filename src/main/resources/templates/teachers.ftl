@@ -8,12 +8,12 @@
     padding: 5px;
     }
 </style>
-    
+
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="../resources/static/images/eggplant.png"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    
+
     <title>Teacher Reviews - UTSReviews</title>
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -113,8 +113,9 @@
                      <!-- Attempt for Rating-->
                       <div class="form-group">
                         <label for="teacherRatingId">Rating</label>
-                        <select name="teacherRating" id="teacherRating" class="form-control">
-                          <option value="1" selected="selected">1 Worst</option>
+                        <select name="teacherRating" id="teacherRating" class="form-control" required>
+                           <option disabled selected value> -- select a rating -- </option>
+                          <option value="1">1 Worst</option>
                           <option value="2">2</option>
                           <option value="3">3</option>
                           <option value="4">4</option>
@@ -127,7 +128,7 @@
                         <label for="text">Content</label>
                         <textarea name="text" id="teacherText" name="teacherText" rows="10" class="form-control" maxlength="999" required></textarea>
                     </div>
-                    
+
                     <input type="hidden" name="id" id="teacherReviewId">
                 </form>
             </div>
